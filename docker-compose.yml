@@ -1,0 +1,9 @@
+services:
+  astro:
+    build: .
+    ports:
+      - "4321:80"
+    restart: always
+  # Strapi service - usually requires its own Dockerfile in a separate directory
+  # or a pre-built image. Assuming Strapi is managed separately for now
+  # or we'll add it here when the path is clear.
