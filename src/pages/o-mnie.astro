@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import AboutHero from '../components/AboutHero.astro';
+import AboutBio from '../components/AboutBio.astro';
+import AboutExp from '../components/AboutExp.astro';
+import Footer from '../components/Footer.astro';
+
+// SEO data for about page
+const title = "O Mnie - Katarzyna Wiśniewska | Założycielka Pilateka";
+const description = "Poznaj Katarzynę Wiśniewską, założycielkę Pilateka we Wrocławiu. Certyfikowana instruktorka pilatesu z pasją do świadomego ruchu i biomechaniki.";
+---
+
+<Layout title={title} description={description}>
+	<Navigation />
+	<main>
+		<AboutHero />
+		<AboutBio />
+		<AboutExp />
+        
+	</main>
+	<Footer />
+</Layout>

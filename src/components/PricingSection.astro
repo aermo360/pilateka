@@ -1,0 +1,92 @@
+---
+import { fetchApi } from '../lib/strapi';
+
+interface PricingItem {
+  name: string;
+  price: string;
+  originalPrice?: string;
+  description: string;
+  popular?: boolean;
+}
+
+interface PricingCategory {
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: string;
+  items: PricingItem[];
+}
+
+let categories;
+try {
+  categories = await fetchApi<PricingCategory[]>({ 
+    endpoint: 'pricing-categories', 
+    query: 'populate=items' 
+  });
+} catch (e) {
+  categories = [
+    {
+      title: "Treningi Indywidualne",
+      subtitle: "Pełna uwaga instruktora",
+      description: "Pakiety ważne przez 3 miesiące.",
+      icon: "person",
+      items: [
+        { name: "Trening pojedynczy (55-60 min)", price: "250 zł", description: "" },
+        { name: "Pakiet 5 treningów", price: "1000 zł", originalPrice: "1250 zł", description: "", popular: true },
+        { name: "Pakiet 10 treningów", price: "1900 zł", originalPrice: "2500 zł", description: "" }
+      ]
+    },
+    {
+      title: "Treningi w Duecie",
+      subtitle: "Wspólna motywacja",
+      description: "Pakiety ważne przez 3 miesiące.",
+      icon: "people",
+      items: [
+        { name: "Trening pojedynczy (55-60 min)", price: "320 zł", description: "" },
+        { name: "Pakiet 5 treningów", price: "1500 zł", originalPrice: "1600 zł", description: "" },
+        { name: "Pakiet 10 treningów", price: "2700 zł", originalPrice: "3200 zł", description: "" }
+      ]
+    }
+  ];
+}
+---
+
+<section class="py-16 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            {categories.map((category) => (
+                <div class="flex flex-col">
+                    <div class="mb-8 text-center lg:text-left">
+                        <div class="inline-flex items-center justify-center p-3 bg-primary/10 dark:bg-primary/30 rounded-full mb-4 text-primary dark:text-white">
+                            <span class="material-icons-outlined text-3xl">{category.icon}</span>
+                        </div>
+                        <h2 class="text-3xl font-accent text-primary dark:text-white mb-2">{category.title}</h2>
+                        <p class="text-gray-500 dark:text-gray-400 font-light text-sm tracking-wide uppercase">{category.subtitle}</p>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300 font-light">
+                            {category.description}
+                        </p>
+                    </div>
+                    <div class="bg-surface-light dark:bg-surface-dark shadow-lg dark:shadow-none dark:border dark:border-gray-700 rounded-xl overflow-hidden flex-1 flex flex-col">
+                        {category.items.map((item, index) => (
+                            <div class={`p-8 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group relative ${index === category.items.length - 1 ? 'border-b-0' : ''}`}>
+                                {item.popular && (
+                                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-lg">Popularne</div>
+                                )}
+                                <div class="flex justify-between items-baseline mb-2">
+                                    <h3 class="text-xl font-medium text-gray-800 dark:text-white">{item.name}</h3>
+                                    <div class="text-right">
+                                        <span class="text-2xl font-accent font-semibold text-primary dark:text-white">{item.price}</span>
+                                        {item.originalPrice && (
+                                            <div class="text-xs text-gray-400 line-through">{item.originalPrice}</div>
+                                        )}
+                                    </div>
+                                </div>
+                                <a href="/kontakt" class="text-primary dark:text-blue-300 text-sm font-semibold uppercase tracking-wider group-hover:underline decoration-1 underline-offset-4">Rezerwuj</a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

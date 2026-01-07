@@ -1,0 +1,101 @@
+---
+import { fetchApi } from '../lib/strapi';
+import { Image } from 'astro:assets';
+
+interface StudioGalleryItem {
+  image: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+let images;
+try {
+  images = await fetchApi<StudioGalleryItem[]>({ 
+    endpoint: 'studio-gallery-items', 
+    query: 'populate=*' 
+  });
+} catch (e) {
+  images = [
+    {
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAG0wRiroevU5uWenRrOfz8aBFb2bjlOsOJob3auJP7-BXZZJU5h5IdfPrBOsJLF2F6c7EudGej1jZKsqPq8FSOnQulP9wyvd0RKMD_qRNrV2FeQ14BPVh2fN6Kb7N-LO59uonKZMwFpk3HlIt0PpuAkaY7c-5KfDcy9QLN-cVpdTMRKTUHS6m1avUnsweaN5kECr6_UtnvjuiYC8i0wyVF50JZQgj3BJbfgNZ8vBrmgIK4PM-neHllBUxJC5q32Q3tW1WU7Z7IglY",
+        alternativeText: "Spacious pilates studio"
+      }
+    },
+    {
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBds6BUHnTZOST5Kp1yI0nlPwuYZTU6eblGXkbM5i6wyzdtKGFFEim7fcgO92CzjuLEBQOyrokcNncosm1LZLh4WLGbfXxEke3YlP2EYsDVAIa6CfGNMQWmu8qZjS00DLDIYzoxttQEbAdvJA3uKBEpiamCEgykMQKynl08SeQjHHl7Yq7skurJB4T6LY1rZnJ7gpC6_-f8h0ca0lOkJQkZEvtcdmOTMizA2M2xiF9K7Iwg-xXaOD8zlRHZ48LcV2LvdqXyXmpMJ1Y",
+        alternativeText: "Close up of pilates reformer springs"
+      }
+    },
+    {
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCZGE5uvEFkxrRp7TkZ7R1HjQ70dD1Bbolh5SO56Xvu3WZFAey1PTwnU8T7zA84c0HXppp4WCrscwms6oJ3KdsH8mev1ceUMvJxm2kjDCYxxpnB8TjWLGk9oeNojSCcRQ0Mgq9JuwVPOcrhfBQiK6Y6B_S36X6_IJpPbNEEcoU-LcSNLnGmp2Yb0mADj_vJZFSHbt2fZyi0O2zogDkQMa_uJyqFb9x1HEGSXp0IDHRwGM-_NgV0mjH2TjzXZnDX92_6NmcqwHoOrsE",
+        alternativeText: "Minimalist corner with plant"
+      }
+    },
+    {
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBHP-EQoFy_7Ln4uDagh7Y_11jw3N8dEC1dqfy8ytqY1kiX_igAyaG9v_Ek9hgoe-rNZjzlLDk-p2ynpaZjBmVjiA4xeCZkhd8bnj1c1be8cd85SlBWelu2ku4X6g3vtmUUGTfbj9ifu6CJq5J13IeLxyepEmJ9PW9-sIbOwd6Mcuvd0Ww48HI0DqcalDJYCn9_cduO-rnMosplxlK2HmIgeJiSsYjXCk5AhtPXyR-o5PjAcfnzNiMUf0slh4T1PVrJupz8kbpjrTs",
+        alternativeText: "Pilates instructor assisting student"
+      }
+    }
+  ];
+}
+
+const strapiUrl = import.meta.env.STRAPI_URL || '';
+---
+
+<section class="py-20 md:py-32 bg-background-light dark:bg-background-dark overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 flex flex-col md:flex-row justify-between items-end">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-display text-primary dark:text-white mb-4">Wnętrze Pilateka</h2>
+                <p class="text-gray-600 dark:text-gray-400 font-light max-w-md">Rzut oka na naszą spokojną przestrzeń, wyposażoną w klasyczny sprzęt.</p>
+            </div>
+            <div class="hidden md:block">
+                <a class="text-primary dark:text-white text-sm uppercase tracking-widest border-b border-primary dark:border-white pb-1 hover:opacity-70 transition-opacity" href="#">Zobacz wszystkie zdjęcia</a>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
+            <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden cursor-pointer min-h-[400px]">
+                <Image 
+                    src={images[0].image.url.startsWith('http') ? images[0].image.url : `${strapiUrl}${images[0].image.url}`} 
+                    alt={images[0].image.alternativeText}
+                    width={800}
+                    height={800}
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+            </div>
+            
+            {images.slice(1, 4).map((item) => (
+                <div class="relative group overflow-hidden cursor-pointer min-h-[200px]">
+                    <Image 
+                        src={item.image.url.startsWith('http') ? item.image.url : `${strapiUrl}${item.image.url}`} 
+                        alt={item.image.alternativeText}
+                        width={400}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+                </div>
+            ))}
+
+            <div class="relative group overflow-hidden cursor-pointer min-h-[200px] bg-primary flex items-center justify-center">
+                <div class="text-center p-6">
+                    <span class="material-icons-outlined text-white text-4xl mb-2">calendar_today</span>
+                    <h3 class="text-white font-display text-xl mb-2">Umów wizytę</h3>
+                    <p class="text-white/80 text-xs font-light mb-4">Zobacz studio na żywo.</p>
+                    <button class="bg-white text-primary px-4 py-2 text-xs uppercase tracking-widest hover:bg-opacity-90">Terminarz</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden mt-6 text-center">
+            <a class="text-primary dark:text-white text-sm uppercase tracking-widest border-b border-primary dark:border-white pb-1" href="#">Zobacz wszystkie zdjęcia</a>
+        </div>
+    </div>
+</section>

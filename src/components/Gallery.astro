@@ -1,0 +1,81 @@
+---
+import { fetchApi } from '../lib/strapi';
+import { Image } from 'astro:assets';
+
+interface GalleryItem {
+  label: string;
+  description: string;
+  image: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+let items;
+try {
+  items = await fetchApi<GalleryItem[]>({ 
+    endpoint: 'gallery-items', 
+    query: 'populate=*' 
+  });
+} catch (e) {
+  items = [
+    {
+      label: "Sprzęt",
+      description: "Pilateka jest w pełni wyposażona w przygotowywany na zamówienie klasyczny sprzęt marek Legacy Pilates oraz V PILATES APPARATUS.",
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuArnB_qcOZ2aQrJOug2lorlihNI7_l5bjVpf2PwWA4z_tp1vEKKIHO4Q2vp30HyINf5aQVLOCeaGoXULY4Kn1mxNHoRDDonDvzlUvliA30KpDwKE_GkeOcpPA7dP4sxFjNfWu72NUdNZrvykjs9VZ0BQQACWHGqDpgBqzE7216GncXcRGaPcaewvpIWeXM5IgGf0atVqlT4cQdNxGiLXhjV0mjLp6RpsnB6mMElTuPfWsmhRAnLpxibBXWekwZrWz10A95GuMHa-Io",
+        alternativeText: "Close up of pilates equipment details"
+      }
+    },
+    {
+      label: "Atmosfera",
+      description: "W studio trenujemy przede wszystkim indywidualnie i w duetach- dzięki temu każdy trening może być dostosowany do Twoich potrzeb i możliwości, bezpieczny i skupiony na Twoich celach.",
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAY_6hcFAQownHibTFBfLkz7hFTsnQOhMRUCcBPGNHlVLM3U10F3r2Bue7Zvt9VX2q5zPak0axIa-FvBiU-4goe9hRVwoYQ9LGezsL4E_4kiLZF49kFuJVMbyJ-J_RYGObyLdPs3zJfh4IUvR2ylIPvQNZVTXicJS5WMMTHcXx455KL9XRJThTS7X6v-WRrl2NClkgEFZ5O8t5IZXOZUsU2GR0f6wi6OVt4H26qgNQ8ofGAsyMHCmdwO6iHonY34oU3CAdyji27_fw",
+        alternativeText: "Woman stretching in a bright studio"
+      }
+    },
+    {
+      label: "Społeczność",
+      description: "Oprócz regularnych treningów w studio możemy się spotkać na weekendowych pilatesowych wyjazdach, jednodniowych warsztatach i lekcjach pilatesu na macie w ramach większych eventów.",
+      image: {
+        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAMHkBX1043PEdI4ojyJcwBeBqTuX5PW3TPa8BKR5pNaRnaxGtYeOMhvLoBkAFndGfVmtwcEbYQ6zNLH6iu2UExVLdbtQt3FpOxhwVACocMLAn1SS8XLvDSu5ISLzRxggjmYSZ7C60gno00-Gj2D-s14-8vvxs3bp5EH_roOsjTLpnXtticPx54xYpON9cVRsBH-hO83kdCbOMH8_LvQmfxcl72uzor6QMUtov7WFWEgPZNsxPdreLaqdJlWnZickZIVXdZU1MbExM",
+        alternativeText: "Group pilates class session"
+      }
+    }
+  ];
+}
+
+const strapiUrl = import.meta.env.STRAPI_URL || '';
+---
+
+<section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 mb-16 text-center">
+        <h3 class="text-3xl font-accent text-primary dark:text-white uppercase tracking-widest italic">Nasza Przestrzeń</h3>
+        <div class="w-12 h-[2px] bg-primary mx-auto mt-6 opacity-20"></div>
+    </div>
+    <div class="flex space-x-10 overflow-x-auto pb-16 px-8 md:justify-center scrollbar-hide snap-x">
+        {items.map((item) => (
+            <div class="flex-shrink-0 snap-center w-80 h-[28rem] md:w-[22rem] md:h-[32rem] relative group cursor-pointer overflow-hidden bg-gray-200 dark:bg-gray-700 shadow-2xl">
+                <Image 
+                    src={item.image.url.startsWith('http') ? item.image.url : `${strapiUrl}${item.image.url}`} 
+                    alt={item.image.alternativeText}
+                    width={800}
+                    height={1000}
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-95 group-hover:opacity-100" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8 md:p-12">
+                    <p class="text-white text-xs uppercase tracking-[0.3em] mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 opacity-80">{item.label}</p>
+                    <h4 class="text-2xl md:text-3xl font-accent text-white mb-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100 italic">{item.label}</h4>
+                    <p class="text-blue-50 text-base md:text-lg font-light leading-relaxed transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-200">
+                        {item.description}
+                    </p>
+                </div>
+                <div class="absolute bottom-8 left-8 right-8 flex flex-col group-hover:opacity-0 transition-opacity duration-300">
+                     <p class="text-white text-xl font-accent italic tracking-widest uppercase">{item.label}</p>
+                     <div class="w-12 h-px bg-white/50 mt-2"></div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

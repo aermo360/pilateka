@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Regulamin - Pilateka Studio Pilates Wrocław";
+const description = "Zapoznaj się z regulaminem studia Pilateka we Wrocławiu. Zasady uczestnictwa w zajęciach, odwoływania treningów i bezpieczeństwa.";
+
+const rules = [
+    "KLIENT UCZESTNICZĄCY W LEKCJACH PILATES OŚWIADCZA, ŻE NIE MA PRZECIWWSKAZAŃ LEKARSKICH DO WYKONYWANIA ĆWICZEŃ FIZYCZNYCH A TAKŻE OŚWIADCZA, ŻE PODEJMUJE TRENINGI NA WŁASNĄ ODPOWIEDZIALNOŚĆ. W PRZYPADKU JAKIKOLWIEK WĄTPLIWOŚCI DOTYCZĄCYCH STANU ZDROWIA, CIĘŻKICH ZACHOROWAŃ, SCHORZEŃ UKŁADU RUCHU LUB CIĄŻY, NAUCZYCIEL MOŻE ZAŻĄDAĆ ZAŚWIADCZENIA LEKARSKIEGO O BRAKU PRZECIWWSKAZAŃ DO ĆWICZEŃ PILATES",
+    "Z USŁUG STUDIA MOGĄ KORZYSTAĆ JEDYNIE OSOBY PEŁNOLETNIE. W PRZYPADKU OSÓB NIEPEŁNOLETNICH WYMAGANA JEST PISEMNA ZGODA LUB OBECNOŚĆ OPIEKUNA PRAWNEGO.",
+    "KLIENT POWINIEN STAWIĆ SIĘ PUNKTUALNIE NA UMÓWIONYM TRENINGU. W PRZYPADKU SPÓŹNIENIA SIĘ KLIENTA NA TRENING PILATES, CZAS SPÓŹNIENIA ODLICZONY BĘDZIE OD PLANOWANEGO CZASU TRENINGU (55-60 MIN)",
+    "PODCZAS TRENINGU OBOWIĄZUJE STRÓJ SPORTOWY, NIEOGRANICZAJĄCY SWOBODY RUCHU. ĆWICZYMY BOSO ALBO W SKARPETKACH.",
+    "UMÓWIONY TRENING PILATES MOŻE ZOSTAĆ ODWOŁANY BEZ ŻADNYCH KONSEKWENCJI Z 12-GODZINNYM WYPRZEDZENIEM. W PRZYPADKU KIEDY KLIENT W CZASIE KRÓTSZYM NIŻ 12 GODZIN PRZED UMÓWIONYM TERMINEM POINFORMUJE NAUCZYCIELA O ODWOŁANIU TRENINGU, TRENING PILATES ZOSTAJE UZNANY PRZEZ NAUCZYCIELA ZA PRZEPROWADZONY. KLIENT JEST ZOBOWIĄZANY ZA NIEGO ZAPŁACIĆ LUB WEJŚCIE ZOSTAJE SKREŚLONE Z ZAKUPIONEGO PAKIETU.",
+    "STUDIO MA PRAWO DO ODWOŁANIA ZAPLANOWANYCH ZAJĘĆ Z PRZYCZYN LOSOWYCH LUB TECHNICZNYCH, PO UPRZEDNIM POINFORMOWANIU KLIENTA.",
+    "PŁATNOŚĆ ZA ZAJĘCIA JEST DOKONYWANA PRZELEWEM NA KONTO, BLIKIEM LUB GOTÓWKĄ W STUDIO. TERMINY TRENINGÓW SĄ USTALANE BEZPOŚREDNIO Z NAUCZYCIELEM (TELEFONICZNIE, PRZEZ SMS LUB INSTAGRAM)",
+    "STUDIO NIE PONOSI ODPOWIEDZIALNOŚCI ZA RZECZY POZOSTAWIONE NA TERENIE STUDIA.",
+    "ZABRANIA SIĘ WSTĘPU DO STUDIA OSOBOM W STANIE PO SPOŻYCIU ALKOHOLU LUB SUBSTANCJI ODURZAJĄCYCH.",
+    "KLIENT WYRAŻA ZGODĘ NA PRZETWARZANIE DANYCH OSOBOWYCH (IMIĘ, NAZWISKO, NUMER TELEFONU) W CELACH KONTAKTOWYCH, DOTYCZĄCYCH UMÓWIONYCH ZAJĘĆ PILATES. DOSTĘP DO DANYCH POSIADA JEDYNIE NAUCZYCIEL PROWADZĄCY ZAJĘCIA ORAZ WŁAŚCICIEL STUDIA.",
+    "REGULAMIN JEST DOSTĘPNY W STUDIO.",
+    "WSZELKIE KWESTIE NIEUJĘTE W REGULAMINIE REGULUJE KODEKS CYWILNY."
+];
+---
+
+<Layout title={title} description={description}>
+    <Navigation />
+    <main class="pt-32 pb-24 bg-background-light dark:bg-background-dark min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-16">
+                <h1 class="font-accent text-3xl md:text-5xl text-primary dark:text-white mb-6 uppercase tracking-widest">Regulamin</h1>
+                <div class="w-24 h-1 bg-primary dark:bg-white mx-auto"></div>
+            </header>
+            
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <div class="bg-white dark:bg-surface-dark p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <ol class="space-y-8 list-none">
+                        {rules.map((rule, index) => (
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 dark:bg-white/10 flex items-center justify-center text-primary dark:text-white font-bold text-sm mr-4 mt-1">
+                                    {index + 1}
+                                </span>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed font-light">
+                                    {rule}
+                                </p>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center text-gray-500 dark:text-gray-400 text-sm italic">
+                Ostatnia aktualizacja: {new Date().toLocaleDateString('pl-PL')}
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

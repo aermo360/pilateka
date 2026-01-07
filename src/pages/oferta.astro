@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import PricingHero from '../components/PricingHero.astro';
+import PricingSection from '../components/PricingSection.astro';
+import PricingFeatures from '../components/PricingFeatures.astro';
+import PricingCTA from '../components/PricingCTA.astro';
+import Footer from '../components/Footer.astro';
+
+// SEO data for pricing page
+const title = "Oferta i Cennik - Pilateka Wrocław | Treningi Pilates";
+const description = "Sprawdź ofertę i cennik studia Pilateka we Wrocławiu. Treningi personalne, sesje w duetach i pakiety zajęć dostosowane do Twoich potrzeb.";
+---
+
+<Layout title={title} description={description}>
+	<Navigation />
+	<main>
+		<PricingHero />
+		<PricingSection />
+        <PricingFeatures />
+	</main>
+	<Footer />
+</Layout>

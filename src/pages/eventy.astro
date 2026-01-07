@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+
+const events = [
+    {
+        type: "WARSZTAT",
+        date: "29 WRZ 2024",
+        location: "WROCŁAW",
+        title: "Klasyczny Matwork: Powrót do Źródeł",
+        description: "3-godzinny warsztat poświęcony technice matworku. Skupimy się na klasycznym porządku ćwiczeń, nawigacji oraz pracy nad kontrolą i precyzją.",
+        price: "250 PLN",
+        image: "https://images.unsplash.com/photo-1518611012118-29a8d63e8c2c?q=80&w=800&auto=format&fit=crop",
+        status: "ZAPISZ SIĘ",
+        link: "/wyjazd-details"
+    },
+    {
+        type: "WYJAZD",
+        date: "10-14 SIERPNIA 2024",
+        location: "MAZURY",
+        title: "Oddech i Ruch: Pilates Retreat",
+        description: "Długi weekend w sercu Natury. Codzienne sesje pilatesu, zdrowe jedzenie, warsztaty oddechowe. Czas na regenerację w kameralnej grupie.",
+        price: "od 1600 PLN",
+        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop",
+        status: "LISTA OCZEKUJĄCYCH",
+        link: "/wyjazd-details"
+    }
+];
+---
+
+<Layout title="Wyjazdy i Eventy - Pilateka Wrocław" description="Dołącz do nas podczas wyjątkowych wydarzeń, warsztatów i wyjazdów z pilatesem. Zadbaj o ciało i umysł w wyjątkowych okolicznościach.">
+    <Navigation />
+    
+    <main>
+        {/* Hero Section */}
+        <div class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <Image 
+                    src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1920&auto=format&fit=crop" 
+                    alt="Wyjazdy Pilateka"
+                    width={1920}
+                    height={1080}
+                    class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+            <div class="relative z-10 text-center text-white px-4">
+                <h1 class="text-6xl md:text-8xl font-accent tracking-[0.2em] mb-4 uppercase">Wyjazdy</h1>
+                <p class="text-xs md:text-sm tracking-[0.5em] font-light uppercase opacity-80">Eventy & Warsztaty</p>
+            </div>
+        </div>
+
+        {/* Intro Section */}
+        <section class="py-24 bg-white dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <span class="text-[0.6rem] uppercase tracking-[0.3em] text-primary dark:text-gray-400 font-medium border-b border-primary/20 pb-2 inline-block">Pasja</span>
+                        <h2 class="text-3xl md:text-4xl font-accent text-primary dark:text-white leading-tight">Zadbaj o ciało i umysł w wyjątkowych okolicznościach.</h2>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed text-lg italic">
+                            Nasze wyjazdy to coś więcej niż tylko treningi. To czas na oddech, odnalezienie siły, stabilności i głęboki odpoczynek. Starannie wybieramy lokalizacje blisko natury, w otoczeniu inspirującej architektury, działając w duchu slow i uważności. Organizujemy wyjazdy w najpiękniejsze zakątki Polski i Europy. To idealna okazja, by pogłębić swoją praktykę i poznać pasjonatów metody i nie tylko odpocząć.
+                        </p>
+                    </div>
+                    <div class="relative aspect-[4/3] overflow-hidden shadow-2xl rounded-sm">
+                        <Image 
+                            src="https://images.unsplash.com/photo-1518611012118-29a8d63e8c2c?q=80&w=1200&auto=format&fit=crop" 
+                            alt="Pilates event"
+                            width={1200}
+                            height={900}
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Upcoming Events Section */}
+        <section class="py-24 bg-[#FBFBFB] dark:bg-surface-dark/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-accent text-primary dark:text-white mb-4 italic">Nadchodzące Wydarzenia</h2>
+                    <p class="text-gray-500 dark:text-gray-400 font-light tracking-wide text-xs uppercase">dołącz do nas podczas najbliższych warsztatów i wyjazdów.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                    {events.map((event) => (
+                        <a href={event.link} class="group bg-white dark:bg-surface-dark shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col">
+                            <div class="relative h-80 overflow-hidden">
+                                <Image 
+                                    src={event.image} 
+                                    alt={event.title}
+                                    width={800}
+                                    height={600}
+                                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                />
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-primary/90 text-white text-[10px] tracking-[0.2em] font-bold px-4 py-2 uppercase rounded-sm">{event.type}</span>
+                                </div>
+                            </div>
+                            <div class="p-8 flex-1 flex flex-col">
+                                <div class="text-[10px] tracking-[0.2em] text-gray-400 dark:text-gray-500 font-medium mb-3 uppercase">
+                                    {event.date} | {event.location}
+                                </div>
+                                <h3 class="text-2xl font-accent text-primary dark:text-white mb-4 group-hover:text-primary transition-colors italic">{event.title}</h3>
+                                <p class="text-gray-500 dark:text-gray-400 font-light text-sm leading-relaxed mb-8 line-clamp-2">
+                                    {event.description}
+                                </p>
+                                <div class="mt-auto flex justify-between items-center pt-6 border-t border-gray-100 dark:border-gray-800">
+                                    <span class="text-lg font-accent font-semibold text-primary dark:text-white">{event.price}</span>
+                                    <span class="text-[10px] tracking-[0.2em] font-bold uppercase text-primary border-b border-primary/20 group-hover:border-primary transition-all pb-1">{event.status}</span>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* Newsletter / Contact CTA Section */}
+        <section class="py-24 bg-primary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <span class="material-icons-outlined text-3xl">mail_outline</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-accent mb-6 italic">Bądź na bieżąco</h2>
+                <p class="text-blue-50/80 font-light text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Miejsce na wyjazdy szybko się kończą. Zapisz się do newslettera lub obserwuj nas w mediach społecznościowych aby dowiadywać się o nowych terminach jako pierwszy.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="/kontakt" class="w-full sm:w-auto px-10 py-4 border border-white/30 hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest text-xs font-bold bg-white/5 backdrop-blur-sm">
+                        Skontaktuj się
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-xs uppercase tracking-widest font-bold opacity-70 hover:opacity-100 transition-opacity">
+                        <span class="material-icons-outlined text-sm">facebook</span>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-xs uppercase tracking-widest font-bold opacity-70 hover:opacity-100 transition-opacity">
+                        <span class="material-icons-outlined text-sm">photo_camera</span>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>

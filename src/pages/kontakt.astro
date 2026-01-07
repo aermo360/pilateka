@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ContactHero from '../components/ContactHero.astro';
+import ContactInfoCard from '../components/ContactInfoCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+import ContactMap from '../components/ContactMap.astro';
+import Footer from '../components/Footer.astro';
+
+// SEO data for contact page
+const title = "Kontakt - Pilateka Studio Pilates Wrocław | Zapraszamy";
+const description = "Skontaktuj się z Pilatek-ą. Znajdziesz nas we Wrocławiu przy ul. Hercena. Umów się na trening pilates na maszynach lub zapytaj o wolne terminy.";
+---
+
+<Layout title={title} description={description}>
+    <Navigation />
+    <main>
+        <ContactHero />
+        
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-8 sm:-mt-12 mb-16">
+            <div class="bg-white dark:bg-background-dark shadow-2xl rounded-sm overflow-hidden flex flex-col md:flex-row border border-gray-100 dark:border-gray-800">
+                <ContactInfoCard />
+                <ContactForm />
+            </div>
+        </section>
+
+        <ContactMap />
+    </main>
+    <Footer />
+</Layout>

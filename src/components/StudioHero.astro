@@ -1,0 +1,55 @@
+---
+import { fetchApi } from '../lib/strapi';
+import { Image } from 'astro:assets';
+
+interface StudioHeroData {
+  title: string;
+  description: string;
+  image: {
+    url: string;
+    alternativeText: string;
+  };
+}
+
+let data;
+try {
+  data = await fetchApi<StudioHeroData>({ 
+    endpoint: 'studio-hero', 
+    query: 'populate=*' 
+  });
+} catch (e) {
+  data = {
+    title: "Studio",
+    description: "Kameralna przestrzeń dla ciała i umysłu w sercu Wrocławia.",
+    image: {
+      url: "https://lh3.googleusercontent.com/aida-public/AB6AXuDF7z8d9FnCv53IMPR2Aqm2D_cdpDRIWdrTtRx2EKvkBrxqPM1qCZC3z6nEDi5j3WeaQdYOcdGl0Xa9FOo8TPs7AMhsBtjiIYOE1qNLnlLqe3EvmVVY8GlRcJBf8Lb4FcFU4QpEPsXRTR9LJ9-TqV1DTP2zVWByI28Hk6bKsn4wDw3ARgFCW8ByAWOECPU-CWamalNqbWy-TND9Loq2ejzb-p4PAlBMVdPqBDHnkbQQ2NSIg2e7E2vNWYr8_2sMyrTcdBShGiqameI",
+      alternativeText: "Abstract clean pilates studio space"
+    }
+  };
+}
+
+const strapiUrl = import.meta.env.STRAPI_URL || '';
+const imageUrl = data.image.url.startsWith('http') 
+  ? data.image.url 
+  : `${strapiUrl}${data.image.url}`;
+---
+
+<header class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <Image 
+            src={imageUrl} 
+            alt={data.image.alternativeText}
+            width={1920}
+            height={1080}
+            loading="eager"
+            class="w-full h-full object-cover opacity-90 dark:opacity-60"
+        />
+        <div class="absolute inset-0 bg-primary/20 dark:bg-background-dark/70 mix-blend-multiply"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-7xl mx-auto animate-fade-in">
+        <h1 class="text-5xl md:text-7xl font-display text-white mb-6 tracking-wide">{data.title}</h1>
+        <p class="text-lg md:text-xl text-white/90 font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+            {data.description}
+        </p>
+    </div>
+</header>

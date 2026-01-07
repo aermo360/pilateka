@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pilateka Strona Główna</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1A2B6B", // Navy Blue derived from the image
+              "primary-light": "#2A3F85",
+              "background-light": "#F9FAFB", // Very light gray/white
+              "background-dark": "#0F172A", // Dark slate
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#1E293B",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              display: ["Playfair Display", "serif"], // Sophisticated serif for headings
+            },
+            borderRadius: {
+              DEFAULT: "2px", // Sharp, minimalist corners
+            },
+            letterSpacing: {
+              'widest-xl': '0.25em',
+            }
+          },
+        },
+      };
+    </script>
+<style>html {
+            scroll-behavior: smooth;
+        }@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans selection:bg-primary selection:text-white">
+<nav class="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center md:hidden">
+<button class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none" type="button">
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+<div class="flex-shrink-0 flex items-center justify-center w-full md:w-auto md:justify-start">
+<a class="flex flex-col items-center group" href="#">
+<span class="font-sans text-2xl font-medium tracking-[0.2em] text-primary dark:text-white group-hover:opacity-80 transition-opacity">PILATEKA</span>
+</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="#">Główna</a>
+<a class="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="#studio">Studio</a>
+<a class="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="#studio">O Mnie</a>
+<a class="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="#oferta">Oferta</a>
+<a class="px-6 py-2 bg-primary text-white text-sm uppercase tracking-widest hover:bg-primary-light transition-colors duration-300 shadow-sm hover:shadow-md" href="#kontakt">
+                        Kontakt
+                    </a>
+</div>
+<div class="absolute right-4 md:static">
+<button class="p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined dark:hidden">dark_mode</span>
+<span class="material-icons-outlined hidden dark:block">light_mode</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-primary dark:bg-background-dark z-0">
+<img alt="Abstract gentle pilates movement background" class="w-full h-full object-cover opacity-20 dark:opacity-10 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtT1nn2amOuFH9qkj82G5Rtz53o27ghhiT6paPwhzWVZ9pfySe3tGshaJv-CgaNOXAa0dSgK2FyyG6kg1Psr5zQX-OLXicxCTyo00aJfptsjOp8Z6YpdcYyMJBmaLXQVCh57J6n4FC_kPGV7QHrutftYXZJ1a0bKi-hrMqVoLcWByLrYlZXYx4Y-YVxw_IMWzf_q5e6rUkTWiaZBGG-E2hTUF3g6QzsOJBVDgtOfLJvfQrYEQZXA2roY9gQRDB6zCGi2BbeXpOgbI"/>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl mx-auto animate-fade-in">
+<div class="mb-8 select-none">
+<h1 class="text-5xl md:text-7xl lg:text-8xl text-white font-normal tracking-[0.15em] mb-2 font-sans">PILATEKA</h1>
+<div class="w-24 md:w-48 h-px bg-white mx-auto my-6"></div>
+<h2 class="text-lg md:text-xl text-white tracking-[0.3em] font-light uppercase">Studio Pilates</h2>
+</div>
+<p class="mt-8 text-lg md:text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed font-display italic">
+                Pilateka to kameralne studio klasycznego pilatesu w centrum Wrocławia, w którym na światowej klasy profesjonalnych sprzętach, w spokojnej atmosferze i z szacunkiem do Twoich potrzeb możesz zacząć swoją przygodę z tą genialną, ponad stuletnią metodą ćwiczeń.
+            </p>
+<div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
+<a class="inline-block px-8 py-3 border border-white text-white uppercase tracking-widest text-sm hover:bg-white hover:text-primary transition-all duration-300" href="#studio">
+                    Więcej
+                </a>
+</div>
+</div>
+</header>
+<section class="py-24 bg-surface-light dark:bg-surface-dark transition-colors duration-300" id="studio">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<span class="text-primary text-sm uppercase tracking-[0.2em] font-medium block mb-2">Filozofia</span>
+<h3 class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white leading-tight">
+                        Mindful movement for a balanced life.
+                    </h3>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                        At Pilateka, we believe that true strength comes from within. Located in the serene corners of Wrocław, our studio offers a sanctuary away from the city's hustle. We focus on classical Pilates methods infused with contemporary understanding of biomechanics.
+                    </p>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                        Whether you are rehabilitating an injury or looking to deepen your physical practice, our certified instructors guide you with precision and care in an intimate, minimalist setting designed for focus.
+                    </p>
+<div class="pt-4">
+<a class="inline-flex items-center text-primary dark:text-white hover:underline underline-offset-4 decoration-1 uppercase tracking-widest text-sm" href="#">
+                            Poznaj naszą historię <span class="material-icons-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative h-96 md:h-[500px] w-full bg-gray-200 dark:bg-gray-800 overflow-hidden shadow-xl">
+<img alt="Minimalist pilates studio interior with natural light" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCai6DyCMfcPhqGcuzvFviq1QuCTqX49Cz075Xs1U_LAs7wdT2AUUhoruxuNmU7MtrzkthQ5Aa_aSEbl7i0OM3jPae6nA-WnUtRdIyTT3L5ZjwyrUKmOX2mExp-nSJBCPT0FQL-ArhOFoNLUywhy0mB9tHsCARYqcFF544DJWZuvMvqYTfPlO7jJjPY8s2AvCz7BMmVioGC685lw7MCeU9_CxJrj_K-pss3QZd-gnMlRbYuxqU_1-okYYhIJBYk6bFN03nPqMnI2Gk"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 mb-12 text-center">
+<h3 class="text-2xl font-display text-gray-900 dark:text-white italic">Przestrzeń</h3>
+<div class="w-12 h-px bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex space-x-6 overflow-x-auto pb-8 px-4 md:justify-center scrollbar-hide snap-x">
+<div class="flex-shrink-0 snap-center w-80 h-96 md:w-96 md:h-[30rem] relative group cursor-pointer overflow-hidden bg-gray-200 dark:bg-gray-700">
+<img alt="Close up of pilates equipment details" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArnB_qcOZ2aQrJOug2lorlihNI7_l5bjVpf2PwWA4z_tp1vEKKIHO4Q2vp30HyINf5aQVLOCeaGoXULY4Kn1mxNHoRDDonDvzlUvliA30KpDwKE_GkeOcpPA7dP4sxFjNfWu72NUdNZrvykjs9VZ0BQQACWHGqDpgBqzE7216GncXcRGaPcaewvpIWeXM5IgGf0atVqlT4cQdNxGiLXhjV0mjLp6RpsnB6mMElTuPfWsmhRAnLpxibBXWekwZrWz10A95GuMHa-Io"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-sm uppercase tracking-widest">Sprzęt</p>
+</div>
+</div>
+<div class="flex-shrink-0 snap-center w-80 h-96 md:w-96 md:h-[30rem] relative group cursor-pointer overflow-hidden bg-gray-200 dark:bg-gray-700">
+<img alt="Woman stretching in a bright studio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY_6hcFAQownHibTFBfLkz7hFTsnQOhMRUCcBPGNHlVLM3U10F3r2Bue7Zvt9VX2q5zPak0axIa-FvBiU-4goe9hRVwoYQ9LGezsL4E_4kiLZF49kFuJVMbyJ-J_RYGObyLdPs3zJfh4IUvR2ylIPvQNZVTXicJS5WMMTHcXx455KL9XRJThTS7X6v-WRrl2NClkgEFZ5O8t5IZXOZUsU2GR0f6wi6OVt4H26qgNQ8ofGAsyMHCmdwO6iHonY34oU3CAdyji27_fw"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-sm uppercase tracking-widest">Atmosfera</p>
+</div>
+</div>
+<div class="flex-shrink-0 snap-center w-80 h-96 md:w-96 md:h-[30rem] relative group cursor-pointer overflow-hidden bg-gray-200 dark:bg-gray-700">
+<img alt="Group pilates class session" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHkBX1043PEdI4ojyJcwBeBqTuX5PW3TPa8BKR5pNaRnaxGtYeOMhvLoBkAFndGfVmtwcEbYQ6zNLH6iu2UExVLdbtQt3FpOxhwVACocMLAn1SS8XLvDSu5ISLzRxggjmYSZ7C60gno00-Gj2D-s14-8vvxs3bp5EH_roOsjTLpnXtticPx54xYpON9cVRsBH-hO83kdCbOMH8_LvQmfxcl72uzor6QMUtov7WFWEgPZNsxPdreLaqdJlWnZickZIVXdZU1MbExM"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-sm uppercase tracking-widest">Społeczność</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-light dark:bg-surface-dark transition-colors duration-300" id="oferta">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white mb-4">Nasza Oferta</h2>
+<p class="text-gray-500 dark:text-gray-400 font-light max-w-2xl mx-auto">Small groups and private sessions tailored to your body's needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group bg-background-light dark:bg-background-dark p-8 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-full mb-6">
+<span class="material-icons-outlined text-primary">self_improvement</span>
+</div>
+<h4 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Reformer Pilates</h4>
+<p class="text-gray-500 dark:text-gray-400 font-light text-sm leading-relaxed mb-6">
+                        Utilize the resistance of the reformer machine to lengthen, strengthen, and tone your entire body.
+                    </p>
+<a class="text-primary text-xs uppercase tracking-widest font-medium border-b border-transparent group-hover:border-primary transition-all pb-1" href="#">Szczegóły</a>
+</div>
+<div class="group bg-background-light dark:bg-background-dark p-8 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-full mb-6">
+<span class="material-icons-outlined text-primary">spa</span>
+</div>
+<h4 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Mat Pilates</h4>
+<p class="text-gray-500 dark:text-gray-400 font-light text-sm leading-relaxed mb-6">
+                        Return to the fundamentals. Use your own body weight and small props for a challenging core workout.
+                    </p>
+<a class="text-primary text-xs uppercase tracking-widest font-medium border-b border-transparent group-hover:border-primary transition-all pb-1" href="#">Szczegóły</a>
+</div>
+<div class="group bg-background-light dark:bg-background-dark p-8 border border-gray-100 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-full mb-6">
+<span class="material-icons-outlined text-primary">accessibility_new</span>
+</div>
+<h4 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Trening Indywidualny</h4>
+<p class="text-gray-500 dark:text-gray-400 font-light text-sm leading-relaxed mb-6">
+                        One-on-one attention customized entirely to your fitness goals, rehabilitation needs, and schedule.
+                    </p>
+<a class="text-primary text-xs uppercase tracking-widest font-medium border-b border-transparent group-hover:border-primary transition-all pb-1" href="#">Szczegóły</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-primary text-white">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<span class="material-icons-outlined text-4xl mb-6 opacity-50">format_quote</span>
+<blockquote class="text-2xl md:text-3xl font-display font-light italic leading-relaxed mb-8">
+                "Sprawność fizyczna jest pierwszym warunkiem szczęścia."
+            </blockquote>
+<cite class="not-italic uppercase tracking-widest text-sm opacity-80">— Joseph Pilates</cite>
+</div>
+</section>
+<footer class="bg-surface-dark text-gray-300 py-16 border-t border-gray-800" id="kontakt">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<h5 class="text-white text-lg tracking-[0.2em] mb-6">PILATEKA</h5>
+<p class="text-sm font-light text-gray-400">
+                        Minimalist Studio Pilates<br/>
+                        Wrocław, Poland
+                    </p>
+</div>
+<div>
+<h6 class="text-xs font-bold uppercase tracking-widest text-white mb-6">Studio</h6>
+<ul class="space-y-4 text-sm font-light">
+<li><a class="hover:text-white transition-colors" href="#">O Nas</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Zajęcia</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Grafik</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Cennik</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs font-bold uppercase tracking-widest text-white mb-6">Kontakt</h6>
+<ul class="space-y-4 text-sm font-light">
+<li class="flex items-start">
+<span class="material-icons-outlined text-sm mr-2 mt-1">location_on</span>
+<span>Rynek 15, 50-101<br/>Wrocław, Poland</span>
+</li>
+<li class="flex items-center">
+<span class="material-icons-outlined text-sm mr-2">phone</span>
+<span>+48 123 456 789</span>
+</li>
+<li class="flex items-center">
+<span class="material-icons-outlined text-sm mr-2">email</span>
+<span>hello@pilateka.pl</span>
+</li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs font-bold uppercase tracking-widest text-white mb-6">Newsletter</h6>
+<p class="text-sm font-light text-gray-400 mb-4">Bądź na bieżąco z naszymi warsztatami.</p>
+<form class="flex flex-col space-y-2">
+<input class="bg-gray-800 border-none text-white text-sm p-3 focus:ring-1 focus:ring-white" placeholder="Email Address" type="email"/>
+<button class="bg-white text-primary text-xs uppercase tracking-widest font-bold py-3 px-4 hover:bg-gray-200 transition-colors" type="submit">Zapisz się</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-light text-gray-500">
+<p>© 2023 Pilateka Studio. Wszelkie prawa zastrzeżone.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Instagram</a>
+<a class="hover:text-white transition-colors" href="#">Facebook</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
