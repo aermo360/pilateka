@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# runtime
+.tmp/
+.cache/
+dist/
+.strapi/
+.strapi-updater.json
+
+# database
+database/data.db*
+
+# environment
+.env
+
+# system
+.DS_Store

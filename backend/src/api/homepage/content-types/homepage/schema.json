@@ -1,0 +1,25 @@
+{
+    "kind": "singleType",
+    "collectionName": "homepages",
+    "info": {
+        "singularName": "homepage",
+        "pluralName": "homepages",
+        "displayName": "Homepage",
+        "description": "Content for the homepage"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "heroTitle": {
+            "type": "string"
+        },
+        "heroSubtitle": {
+            "type": "text"
+        },
+        "heroBgImage": {
+            "type": "string"
+        }
+    }
+}
