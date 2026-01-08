@@ -1,32 +1,69 @@
 ---
+
 ---
-<nav class="sticky top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all duration-300">
+
+<nav
+    class="sticky top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all duration-300"
+>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             <div class="flex items-center md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none" type="button">
+                <button
+                    id="mobile-menu-button"
+                    class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none"
+                    type="button"
+                >
                     <span class="material-icons-outlined">menu</span>
                 </button>
             </div>
             <div class="flex-shrink-0 flex items-center">
                 <a class="group" href="/">
-                    <img src="/logo.jpg" alt="Pilateka Logo" class="h-10 md:h-12 w-auto dark:invert transition-all group-hover:opacity-90" />
+                    <img
+                        src="/logo.jpg"
+                        alt="Pilateka Logo"
+                        class="h-10 md:h-12 w-auto dark:invert transition-all group-hover:opacity-90"
+                    />
                 </a>
             </div>
             <div class="hidden md:flex space-x-8 items-center">
-                <a class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Główna</a>
-                <a class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/studio">Studio</a>
-                <a class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/o-mnie">O Mnie</a>
-                <a class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/oferta">Oferta</a>
-                <a class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/eventy">Eventy</a>
-                <a class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors border-l border-gray-200 dark:border-gray-700 pl-8" href="/kontakt">
+                <a
+                    class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
+                    href="/">Główna</a
+                >
+                <a
+                    class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
+                    href="/studio/">Studio</a
+                >
+                <a
+                    class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
+                    href="/o-mnie/">O Mnie</a
+                >
+                <a
+                    class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
+                    href="/oferta/">Oferta</a
+                >
+                <a
+                    class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
+                    href="/eventy/">Eventy</a
+                >
+                <a
+                    class="text-[11px] uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors border-l border-gray-200 dark:border-gray-700 pl-8"
+                    href="/kontakt/"
+                >
                     Kontakt
                 </a>
             </div>
             <div class="absolute right-4 md:static flex items-center space-x-4">
-                <button id="theme-toggle" class="p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
-                    <span class="material-icons-outlined dark:hidden">dark_mode</span>
-                    <span class="material-icons-outlined hidden dark:block">light_mode</span>
+                <button
+                    id="theme-toggle"
+                    class="p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
+                >
+                    <span class="material-icons-outlined dark:hidden"
+                        >dark_mode</span
+                    >
+                    <span class="material-icons-outlined hidden dark:block"
+                        >light_mode</span
+                    >
                 </button>
             </div>
         </div>
@@ -35,18 +72,23 @@
 
 <script>
     function initializeNav() {
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle?.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle?.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+            localStorage.setItem(
+                "theme",
+                document.documentElement.classList.contains("dark")
+                    ? "dark"
+                    : "light",
+            );
         });
 
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const desktopMenu = document.querySelector('.hidden.md\\:flex');
-        
-        mobileMenuButton?.addEventListener('click', () => {
-             // Basic mobile menu toggle logic could go here
-             // For now, let's just ensure it's responsive
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const desktopMenu = document.querySelector(".hidden.md\\:flex");
+
+        mobileMenuButton?.addEventListener("click", () => {
+            // Basic mobile menu toggle logic could go here
+            // For now, let's just ensure it's responsive
         });
     }
 
@@ -54,5 +96,5 @@
     initializeNav();
 
     // Re-initialize after Astro page transitions
-    document.addEventListener('astro:page-load', initializeNav);
+    document.addEventListener("astro:page-load", initializeNav);
 </script>

@@ -6,9 +6,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pilateka.pl',
-  build: {
-    format: 'file'
-  },
   image: {
     remotePatterns: [
       {
