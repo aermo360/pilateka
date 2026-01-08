@@ -1,5 +1,5 @@
 ---
-import { fetchApi } from '../lib/strapi';
+import { fetchApi } from "../lib/strapi";
 
 interface ExpItem {
   year: string;
@@ -9,43 +9,53 @@ interface ExpItem {
 
 let data;
 try {
-  data = await fetchApi<ExpItem[]>({ 
-    endpoint: 'about-experience-items', 
-    query: '' 
+  data = await fetchApi<ExpItem[]>({
+    endpoint: "about-experience-items",
+    query: "",
   });
 } catch (e) {
+  data = null;
+}
+
+if (!data || !Array.isArray(data) || data.length === 0) {
   data = [
     {
       year: "2018",
       title: "Certyfikowany Instruktor",
-      subtitle: "Kompleksowy Matwork"
+      subtitle: "Kompleksowy Matwork",
     },
     {
       year: "2020",
       title: "Praca z Maszynami",
-      subtitle: "Reformer & Cadillac"
+      subtitle: "Reformer & Cadillac",
     },
     {
       year: "2025",
       title: "Założycielka Pilateka",
-      subtitle: "Otwarcie Studia we Wrocławiu"
-    }
+      subtitle: "Otwarcie Studia we Wrocławiu",
+    },
   ];
 }
 ---
 
 <section class="bg-primary text-white py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="font-display text-3xl md:text-4xl mb-12">Doświadczenie Zawodowe</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {data.map((item) => (
-                <div class="p-6 border border-white/20 hover:border-white/60 transition-colors duration-300">
-                    <span class="block text-4xl font-display mb-2">{item.year}</span>
-                    <hr class="w-12 mx-auto border-white/40 mb-4"/>
-                    <p class="text-sm uppercase tracking-wider font-light">{item.title}</p>
-                    <p class="text-xs text-white/70 mt-2">{item.subtitle}</p>
-                </div>
-            ))}
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="font-display text-3xl md:text-4xl mb-12">
+      Doświadczenie Zawodowe
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        data.map((item) => (
+          <div class="p-6 border border-white/20 hover:border-white/60 transition-colors duration-300">
+            <span class="block text-4xl font-display mb-2">{item.year}</span>
+            <hr class="w-12 mx-auto border-white/40 mb-4" />
+            <p class="text-sm uppercase tracking-wider font-light">
+              {item.title}
+            </p>
+            <p class="text-xs text-white/70 mt-2">{item.subtitle}</p>
+          </div>
+        ))
+      }
     </div>
+  </div>
 </section>
