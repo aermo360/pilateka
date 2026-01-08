@@ -109,7 +109,13 @@
 <script>
     function initializeNav() {
         const themeToggle = document.getElementById("theme-toggle");
-        themeToggle?.addEventListener("click", () => {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+
+        // Theme Toggle
+        themeToggle?.addEventListener("click", (e) => {
+            e.preventDefault();
             document.documentElement.classList.toggle("dark");
             localStorage.setItem(
                 "theme",
@@ -119,11 +125,9 @@
             );
         });
 
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const menuIcon = document.getElementById("menu-icon");
-
-        mobileMenuButton?.addEventListener("click", () => {
+        // Mobile Menu Toggle
+        mobileMenuButton?.addEventListener("click", (e) => {
+            e.preventDefault();
             const isHidden = mobileMenu?.classList.contains("hidden");
             if (isHidden) {
                 mobileMenu?.classList.remove("hidden");
@@ -144,9 +148,6 @@
         });
     }
 
-    // Initialize on first load
-    initializeNav();
-
-    // Re-initialize after Astro page transitions
+    // Run on every page load (including first load)
     document.addEventListener("astro:page-load", initializeNav);
 </script>
