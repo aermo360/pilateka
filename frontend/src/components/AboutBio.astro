@@ -24,10 +24,10 @@ try {
 
 if (!data) {
     data = {
-        storyTitle: "Cześć! Mam na imię Kasia",
+        storyTitle: "Moja Historia",
         storyContent:
-            "Zapraszam Cię do Pilateki – miejsca, w którym mogę się dzielić moją pasją do genialnej formy ruchu, jaką jest pilates. Swoją przygodę z pilatesem zaczęłam w 2018 roku, a dwa lata później rozpoczęłam kursy nauczycielskie. Miałam okazję uczyć się od najlepszych master trenerów klasycznego pilatesu w Polsce i za granicą – ukończyłam 3 poziomy Classical Pilates Pioneer Program u Weroniki Ratkowskiej, Reformer i Cadillac Extensive Course u Karoliny Libelt, szkoliłam się również pod okiem Sonje Mayo, Lesley Bell, Victorii Torie-Capan, Carolyne Ergin oraz Elaine Ewing.",
-        quote: "Stretch with strength and control. - Romana Krzyzanowska",
+            "Pilates poznałam w 2018 roku, i zafascynowała mnie ona od pierwszego zajęcia. Dwa lata później rozpoczęłam edukację nauczycielską. Po kilkunastu ukończonych szkoleniach i kilku tysiącach godzin poprowadzonych zajęć - postanowiłam stworzyć miejsce, w którym będę mogła dzielić się z Wami moją pasją do metody uczyć mądrego ruchu i pomagać w budowaniu sprawności.",
+        quote: "Wierzę, że siła fizyczna buduje odporność psychiczną. W Pilatece budujesz obie.",
         image: {
             url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800",
             alternativeText: "Zdjęcie portret Katarzyny Wiśniewskiej",
@@ -133,16 +133,12 @@ const imageUrl = data.image.url.startsWith("http")
                 <p
                     class="font-display text-xl italic text-primary dark:text-white relative z-10"
                 >
-                    "{
-                        data.quote
-                            .replace(" - Romana Krzyzanowska", "")
-                            .replace(" Romana Krzyzanowska", "")
-                    }"
+                    "{data.quote}"
                 </p>
                 <footer
                     class="mt-4 text-sm font-medium tracking-wide uppercase text-gray-500 dark:text-gray-400"
                 >
-                    — Romana Krzyżanowska
+                    KATARZYNA WIŚNIEWSKA
                 </footer>
             </blockquote>
         </div>

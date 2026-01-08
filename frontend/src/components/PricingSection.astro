@@ -4,9 +4,9 @@ import { fetchApi } from "../lib/strapi";
 interface PricingItem {
   name: string;
   price: string;
-  originalPrice?: string;
   description: string;
   popular?: boolean;
+  linkText: string;
 }
 
 interface PricingCategory {
@@ -31,52 +31,56 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
   categories = [
     {
       title: "Treningi Indywidualne",
-      subtitle: "Pełna uwaga instruktora",
-      description: "Pakiety ważne przez 3 miesiące.",
+      subtitle: "PEŁNA UWAGA INSTRUKTORA",
+      description:
+        "Sesja 1:1 podczas której instruktor skupia się wyłącznie na Twoich potrzebach, celach i ewentualnych ograniczeniach ruchowych. Idealnie dla osób, które chcą pracować nad kondycją, jak i dla początkujących oraz osób po kontuzjach.",
       icon: "person",
       items: [
         {
-          name: "Trening pojedynczy (55-60 min)",
+          name: "Trening pojedynczy",
           price: "250 zł",
-          description: "",
+          description: "Jednorazowy trening personalny (55 min)",
+          linkText: "REZERWUJ",
         },
         {
           name: "Pakiet 5 treningów",
           price: "1000 zł",
-          originalPrice: "1250 zł",
-          description: "",
+          description: "Ważny przez 1,5 miesiąca. Cena za sesję: 200 zł",
           popular: true,
+          linkText: "WYBIERZ PAKIET",
         },
         {
           name: "Pakiet 10 treningów",
           price: "1900 zł",
-          originalPrice: "2500 zł",
-          description: "",
+          description: "Ważny przez 12 tygodni. Cena za sesję: 190 zł",
+          linkText: "WYBIERZ PAKIET",
         },
       ],
     },
     {
       title: "Treningi w Duecie",
-      subtitle: "Wspólna motywacja",
-      description: "Pakiety ważne przez 3 miesiące.",
+      subtitle: "WSPÓLNA MOTYWACJA",
+      description:
+        "Trening dla par, przyjaciół lub członków rodziny. Znakomita okazja do spędzenia czasu razem w aktywny sposób, przy zachowaniu kameralnego charakteru zajęć.",
       icon: "people",
       items: [
         {
-          name: "Trening pojedynczy (55-60 min)",
+          name: "Trening pojedynczy",
           price: "320 zł",
-          description: "",
+          description: "Cena za duet (55 min)",
+          linkText: "REZERWUJ",
         },
         {
           name: "Pakiet 5 treningów",
           price: "1500 zł",
-          originalPrice: "1600 zł",
-          description: "",
+          description: "Ważny przez 1,5 miesiąca. Cena za trening: 300 zł",
+          linkText: "WYBIERZ PAKIET",
         },
         {
           name: "Pakiet 10 treningów",
           price: "2700 zł",
-          originalPrice: "3200 zł",
-          description: "",
+          description: "Ważny przez 12 tygodni. Cena za trening: 270 zł",
+          linkText: "WYBIERZ PAKIET",
         },
       ],
     },
@@ -102,7 +106,7 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
               <p class="text-gray-500 dark:text-gray-400 font-light text-sm tracking-wide uppercase">
                 {category.subtitle}
               </p>
-              <p class="mt-4 text-gray-600 dark:text-gray-300 font-light">
+              <p class="mt-4 text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed">
                 {category.description}
               </p>
             </div>
@@ -124,18 +128,16 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
                       <span class="text-2xl font-accent font-semibold text-primary dark:text-white">
                         {item.price}
                       </span>
-                      {item.originalPrice && (
-                        <div class="text-xs text-gray-400 line-through">
-                          {item.originalPrice}
-                        </div>
-                      )}
                     </div>
                   </div>
+                  <p class="text-xs text-gray-400 mb-4 font-light leading-relaxed">
+                    {item.description}
+                  </p>
                   <a
-                    href="/kontakt"
-                    class="text-primary dark:text-blue-300 text-sm font-semibold uppercase tracking-wider group-hover:underline decoration-1 underline-offset-4"
+                    href="/kontakt/"
+                    class="text-primary dark:text-blue-300 text-xs font-semibold uppercase tracking-widest group-hover:underline decoration-1 underline-offset-4"
                   >
-                    Rezerwuj
+                    {item.linkText}
                   </a>
                 </div>
               ))}

@@ -25,8 +25,8 @@ try {
 
 if (!data) {
   data = {
-    label: "Filozofia",
-    title: "Uważny ruch dla zrównoważonego życia.",
+    label: "NASZA FILOZOFIA",
+    title: "Uważny ruch dla równowagi w życiu.",
     description1:
       "W Pilatece wierzymy, że prawdziwa siła pochodzi z wnętrza. Nasze studio, położone w spokojnej części Wrocławia, oferuje schronienie od miejskiego zgiełku. Skupiamy się na klasycznych metodach Pilatesu, wzbogaconych o współczesną wiedzę z zakresu biomechaniki.",
     description2:
@@ -46,7 +46,7 @@ const imageUrl = data.image.url.startsWith("http")
 ---
 
 <section
-  class="py-24 bg-surface-light dark:bg-surface-dark transition-colors duration-300"
+  class="py-24 bg-background-light dark:bg-surface-dark transition-colors duration-300"
   id="studio"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ const imageUrl = data.image.url.startsWith("http")
       <div class="space-y-6">
         <span
           class="text-primary text-sm uppercase tracking-[0.2em] font-medium block mb-2"
-          >Jak pracuję?</span
+          >{data.label}</span
         >
         <h3
           class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white leading-tight"
@@ -70,11 +70,9 @@ const imageUrl = data.image.url.startsWith("http")
         <div class="pt-4">
           <a
             class="inline-flex items-center text-primary dark:text-white hover:underline underline-offset-4 decoration-1 uppercase tracking-widest text-sm"
-            href="#"
+            href="/o-mnie/"
           >
-            Poznaj naszą historię <span
-              class="material-icons-outlined ml-2 text-sm">arrow_forward</span
-            >
+            POZNAJ NASZĄ HISTORIĘ →
           </a>
         </div>
       </div>

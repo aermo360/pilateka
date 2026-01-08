@@ -1,53 +1,36 @@
 ---
 const features = [
   {
-    icon: "event_available",
-    title: "Elastyczny Grafik",
-    description: "Dostosuj godziny treningów do swojego planu dnia. Rezerwacja online dostępna 24/7."
-  },
-  {
     icon: "card_giftcard",
     title: "Vouchery Prezentowe",
-    description: "Podaruj bliskim zdrowie i relaks. Eleganckie zaproszenia dostępne w recepcji."
+    description:
+      "Podaruj bliskim zdrowie i relaks. Eleganckie zaproszenia dostępne w studio.",
   },
   {
     icon: "info",
     title: "Ważne Informacje",
-    description: "Odwołanie treningu możliwe do 12h przed planowaną wizytą bez ponoszenia kosztów."
+    description:
+      "Odwołanie treningu możliwe do 12h przed planowaną wizytą bez ponoszenia kosztów.",
   },
-  {
-    icon: "psychology",
-    title: "Warsztaty Nauczycielskie",
-    description: "Indywidualne warsztaty dla nauczycieli chcących pogłębić wiedzę o klasycznej metodzie."
-  },
-  {
-    icon: "settings",
-    title: "Szkolenia Sprzętowe",
-    description: "Specjalistyczne szkolenia z obsługi i nauczania na klasycznym sprzęcie pilates."
-  },
-  {
-    icon: "groups",
-    title: "Eventy i Wyjazdy",
-    description: "Lekcje pilatesu na macie podczas wydarzeń zewnętrznych oraz wyjazdów."
-  },
-  {
-    icon: "beach_access",
-    title: "Weekendowe Wyjazdy",
-    description: "Intensywne weekendy z pilatesem w wyjątkowych miejscach blisko natury."
-  }
 ];
 ---
 
 <div class="mt-20 border-t border-gray-200 dark:border-gray-800 pt-16 mb-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
-        {features.map((feature) => (
-            <div class="p-6">
-                <span class="material-icons-outlined text-primary dark:text-blue-300 text-4xl mb-4">{feature.icon}</span>
-                <h4 class="text-lg font-accent font-medium text-primary dark:text-white mb-2">{feature.title}</h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 font-light">
-                    {feature.description}
-                </p>
-            </div>
-        ))}
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+    {
+      features.map((feature) => (
+        <div class="p-6 text-center">
+          <span class="material-icons-outlined text-primary dark:text-blue-300 text-4xl mb-4">
+            {feature.icon}
+          </span>
+          <h4 class="text-lg font-accent font-medium text-primary dark:text-white mb-2">
+            {feature.title}
+          </h4>
+          <p class="text-sm text-gray-600 dark:text-gray-400 font-light">
+            {feature.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
 </div>

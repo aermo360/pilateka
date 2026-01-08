@@ -768,3 +768,361 @@ Create your first administrator 💻 by going to the administration panel at:
 [2026-01-08 02:08:14.667] [32mhttp[39m: GET /api/contact-hero (8 ms) 404
 [2026-01-08 02:08:14.681] [32mhttp[39m: GET /api/contact (15 ms) 404
 [2026-01-08 02:08:14.683] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 02:08:32.934] [32mhttp[39m: GET /api/contact-hero (6 ms) 404
+[2026-01-08 02:08:32.935] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 02:08:32.936] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 02:10:09.841] [32mhttp[39m: GET /api/contact-hero (2 ms) 404
+[2026-01-08 02:10:09.984] [32mhttp[39m: GET /api/contact (113 ms) 404
+[2026-01-08 02:10:09.989] [32mhttp[39m: GET /api/contact (99 ms) 404
+[2026-01-08 02:10:09.997] [32mhttp[39m: GET /admin/auth/register-admin (8 ms) 200
+[2026-01-08 02:10:10.657] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 02:11:28.607] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 02:12:42.673] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (4ms)
+[2026-01-08 02:12:43.698] [32minfo[39m: Shutting down Strapi
+[2026-01-08 02:12:43.701] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-08 02:12:46.126] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:53401) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (40ms)
+- Creating admin
+✔ Creating admin (247ms)
+✔ Loading Strapi (1074ms)
+- Generating types
+✔ Generating types (88ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (884ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Thu Jan 08 2026 02:12:47 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 2058 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 53401                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-08 02:12:47.446] [32minfo[39m: Strapi started successfully
+[2026-01-08 02:12:47.587] [32mhttp[39m: GET /admin (26 ms) 200
+[2026-01-08 02:12:48.070] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 02:12:48.177] [32mhttp[39m: GET /admin/init (2 ms) 200
+2:13:38 AM [vite] page reload .strapi/client/index.html
+2:13:38 AM [vite] page reload .strapi/client/app.js
+[2026-01-08 02:13:38.234] [32mhttp[39m: GET /admin/auth/register-admin (8 ms) 200
+[2026-01-08 02:13:38.583] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 02:13:38.662] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 02:13:56.406] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (4ms)
+[2026-01-08 02:14:02.684] [32minfo[39m: Shutting down Strapi
+[2026-01-08 02:14:02.686] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-08 02:14:05.255] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:53584) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (42ms)
+- Creating admin
+✔ Creating admin (248ms)
+✔ Loading Strapi (1082ms)
+- Generating types
+✔ Generating types (96ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (4ms)
+✔ Compiling TS (946ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Thu Jan 08 2026 02:14:06 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 2137 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 53584                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-08 02:14:06.650] [32minfo[39m: Strapi started successfully
+[2026-01-08 02:14:06.769] [32mhttp[39m: GET /admin/auth/register-admin (25 ms) 200
+[2026-01-08 02:14:06.772] [32mhttp[39m: GET /admin (35 ms) 200
+[2026-01-08 02:14:07.280] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 02:14:07.330] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 02:14:07.389] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 02:14:20.777] [32mhttp[39m: GET /admin/init (2 ms) 200
+2:14:28 AM [vite] page reload .strapi/client/index.html
+[2026-01-08 02:14:28.265] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+2:14:28 AM [vite] page reload .strapi/client/app.js
+[2026-01-08 02:14:28.526] [32mhttp[39m: GET /admin/project-type (6 ms) 200
+[2026-01-08 02:14:28.567] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 02:14:29.391] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 02:14:29.640] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 02:14:33.402] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 02:15:15.262] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (3ms)
+[2026-01-08 02:15:16.140] [32minfo[39m: Shutting down Strapi
+[2026-01-08 02:15:16.142] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-08 02:15:18.308] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:53841) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (38ms)
+- Creating admin
+✔ Creating admin (250ms)
+✔ Loading Strapi (991ms)
+- Generating types
+✔ Generating types (88ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (872ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Thu Jan 08 2026 02:15:19 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 1961 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 53841                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-08 02:15:19.627] [32minfo[39m: Strapi started successfully
+[2026-01-08 02:15:19.737] [32mhttp[39m: GET /admin (25 ms) 200
+[2026-01-08 02:15:20.239] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 02:15:20.345] [32mhttp[39m: GET /admin/init (3 ms) 200
+[2026-01-08 06:13:16.888] [32mhttp[39m: GET /api/contact-hero (470 ms) 404
+[2026-01-08 06:13:16.991] [32mhttp[39m: GET /api/contact (123 ms) 404
+[2026-01-08 06:13:17.008] [32mhttp[39m: GET /api/contact (98 ms) 404
+[2026-01-08 06:14:17.011] [32mhttp[39m: GET /api/contact-hero (42 ms) 404
+[2026-01-08 06:14:17.013] [32mhttp[39m: GET /api/contact (36 ms) 404
+[2026-01-08 06:14:17.023] [32mhttp[39m: GET /api/contact (8 ms) 404
+[2026-01-08 09:36:10.477] [32mhttp[39m: GET /api/contact-hero (26 ms) 404
+[2026-01-08 09:36:10.484] [32mhttp[39m: GET /admin/auth/register-admin (55 ms) 200
+[2026-01-08 09:36:10.484] [32mhttp[39m: GET /api/contact (9 ms) 404
+[2026-01-08 09:36:10.491] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 09:36:11.134] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 09:36:11.604] [32mhttp[39m: GET /admin/init (4 ms) 200
+[2026-01-08 09:51:29.653] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 09:51:30.058] [32mhttp[39m: GET /admin/project-type (8 ms) 200
+[2026-01-08 09:51:30.123] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 09:51:30.468] [32mhttp[39m: GET /admin/auth/register-admin (2 ms) 200
+[2026-01-08 09:51:30.730] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 09:51:30.834] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 09:51:31.920] [32mhttp[39m: GET /admin/auth/register-admin (2 ms) 200
+[2026-01-08 09:51:32.263] [32mhttp[39m: GET /admin/project-type (8 ms) 200
+[2026-01-08 09:51:32.340] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 09:51:32.452] [32mhttp[39m: GET /admin/auth/register-admin (2 ms) 200
+[2026-01-08 09:51:32.712] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 09:51:32.811] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 09:51:33.457] [32mhttp[39m: GET /admin/auth/register-admin (2 ms) 200
+[2026-01-08 09:51:33.819] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 09:51:34.128] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 09:51:35.203] [32mhttp[39m: GET /admin/auth/register-admin (2 ms) 200
+[2026-01-08 09:51:35.468] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 09:51:35.564] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 10:06:36.954] [32mhttp[39m: GET /api/contact-hero (31 ms) 404
+[2026-01-08 10:06:36.955] [32mhttp[39m: GET /api/contact (14 ms) 404
+[2026-01-08 10:06:36.956] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:06:53.368] [32mhttp[39m: GET /api/contact-hero (9 ms) 404
+[2026-01-08 10:06:53.375] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 10:06:53.376] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:07:01.943] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-08 10:07:01.945] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 10:07:01.945] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:07:19.209] [32mhttp[39m: GET /api/contact-hero (41 ms) 404
+[2026-01-08 10:07:19.209] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 10:07:19.209] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:07:23.431] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-08 10:07:23.433] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:07:23.433] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:07:26.426] [32mhttp[39m: GET /api/contact-hero (2 ms) 404
+[2026-01-08 10:07:26.426] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:07:26.427] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:07:29.182] [32mhttp[39m: GET /api/contact-hero (2 ms) 404
+[2026-01-08 10:07:29.182] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:07:29.182] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:07:49.235] [32mhttp[39m: GET /api/contact-hero (19 ms) 404
+[2026-01-08 10:07:49.236] [32mhttp[39m: GET /api/contact (18 ms) 404
+[2026-01-08 10:07:49.237] [32mhttp[39m: GET /api/contact (12 ms) 404
+[2026-01-08 10:08:00.707] [32mhttp[39m: GET /api/contact-hero (21 ms) 404
+[2026-01-08 10:08:00.707] [32mhttp[39m: GET /api/contact (12 ms) 404
+[2026-01-08 10:08:00.708] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 10:08:23.872] [32mhttp[39m: GET /api/contact-hero (5 ms) 404
+[2026-01-08 10:08:23.875] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 10:08:23.878] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:08:39.455] [32mhttp[39m: GET /api/contact-hero (3 ms) 404
+[2026-01-08 10:08:39.457] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:08:39.459] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:08:43.484] [32mhttp[39m: GET /api/contact-hero (3 ms) 404
+[2026-01-08 10:08:43.486] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:08:43.486] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:08:58.688] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-08 10:08:58.700] [32mhttp[39m: GET /api/contact (17 ms) 404
+[2026-01-08 10:08:58.702] [32mhttp[39m: GET /api/contact (8 ms) 404
+[2026-01-08 10:09:07.275] [32mhttp[39m: GET /api/contact-hero (5 ms) 404
+[2026-01-08 10:09:07.278] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 10:09:07.279] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:09:21.410] [32mhttp[39m: GET /api/contact-hero (5 ms) 404
+[2026-01-08 10:09:21.422] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 10:09:21.423] [32mhttp[39m: GET /api/contact (9 ms) 404
+[2026-01-08 10:09:57.591] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-08 10:09:57.594] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:09:57.596] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:10:11.733] [32mhttp[39m: GET /api/contact-hero (22 ms) 404
+[2026-01-08 10:10:11.734] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 10:10:11.735] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:10:16.147] [32mhttp[39m: GET /api/contact-hero (1 ms) 404
+[2026-01-08 10:10:16.152] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:10:16.154] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:10:46.158] [32mhttp[39m: GET /api/contact-hero (6 ms) 404
+[2026-01-08 10:10:46.161] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 10:10:46.162] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:11:02.036] [32mhttp[39m: GET /api/contact-hero (8 ms) 404
+[2026-01-08 10:11:02.037] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:11:02.039] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:11:10.970] [32mhttp[39m: GET /api/contact-hero (6 ms) 404
+[2026-01-08 10:11:10.973] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:11:10.975] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:11:15.340] [32mhttp[39m: GET /api/contact-hero (3 ms) 404
+[2026-01-08 10:11:15.341] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:11:15.343] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:11:21.932] [32mhttp[39m: GET /api/contact-hero (5 ms) 404
+[2026-01-08 10:11:21.933] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:11:21.936] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:11:33.928] [32mhttp[39m: GET /api/contact-hero (1 ms) 404
+[2026-01-08 10:11:33.931] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:11:33.931] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:11:53.189] [32mhttp[39m: GET /api/contact-hero (2 ms) 404
+[2026-01-08 10:11:53.190] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:11:53.190] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:11:59.854] [32mhttp[39m: GET /api/contact-hero (3 ms) 404
+[2026-01-08 10:11:59.854] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:11:59.854] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:12:19.940] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-08 10:12:19.940] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:12:19.942] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:12:52.257] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-08 10:12:52.257] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:12:52.258] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:12:56.785] [32mhttp[39m: GET /api/contact-hero (8 ms) 404
+[2026-01-08 10:12:56.788] [32mhttp[39m: GET /api/contact (9 ms) 404
+[2026-01-08 10:12:56.788] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:13:07.027] [32mhttp[39m: GET /api/contact-hero (25 ms) 404
+[2026-01-08 10:13:07.027] [32mhttp[39m: GET /api/contact (19 ms) 404
+[2026-01-08 10:13:07.028] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:13:13.865] [32mhttp[39m: GET /api/contact-hero (15 ms) 404
+[2026-01-08 10:13:13.868] [32mhttp[39m: GET /api/contact (13 ms) 404
+[2026-01-08 10:13:13.869] [32mhttp[39m: GET /api/contact (8 ms) 404
+[2026-01-08 10:13:20.994] [32mhttp[39m: GET /api/contact-hero (18 ms) 404
+[2026-01-08 10:13:20.995] [32mhttp[39m: GET /api/contact (12 ms) 404
+[2026-01-08 10:13:20.998] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 10:13:25.451] [32mhttp[39m: GET /api/contact-hero (3 ms) 404
+[2026-01-08 10:13:25.454] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:13:25.455] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:13:33.477] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-08 10:13:33.480] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 10:13:33.484] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:13:37.654] [32mhttp[39m: GET /api/contact-hero (6 ms) 404
+[2026-01-08 10:13:37.655] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:13:37.655] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:13:40.234] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-08 10:13:40.234] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:13:40.234] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:13:49.414] [32mhttp[39m: GET /api/contact-hero (2 ms) 404
+[2026-01-08 10:13:49.420] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:13:49.421] [32mhttp[39m: GET /api/contact (8 ms) 404
+[2026-01-08 10:13:53.602] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-08 10:13:53.605] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 10:13:53.605] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:14:03.468] [32mhttp[39m: GET /api/contact-hero (23 ms) 404
+[2026-01-08 10:14:03.469] [32mhttp[39m: GET /api/contact (23 ms) 404
+[2026-01-08 10:14:03.470] [32mhttp[39m: GET /api/contact (22 ms) 404
+[2026-01-08 10:14:24.601] [32mhttp[39m: GET /api/contact-hero (5 ms) 404
+[2026-01-08 10:14:24.603] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:14:24.604] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 10:14:29.868] [32mhttp[39m: GET /api/contact-hero (5 ms) 404
+[2026-01-08 10:14:29.872] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 10:14:29.872] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:14:35.360] [32mhttp[39m: GET /api/contact-hero (8 ms) 404
+[2026-01-08 10:14:35.362] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:14:35.364] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 10:14:40.827] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-08 10:14:40.829] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 10:14:40.829] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 10:14:46.385] [32mhttp[39m: GET /api/contact-hero (6 ms) 404
+[2026-01-08 10:14:46.393] [32mhttp[39m: GET /api/contact (11 ms) 404
+[2026-01-08 10:14:46.398] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 10:14:52.491] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-08 10:14:52.494] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 10:14:52.494] [32mhttp[39m: GET /api/contact (2 ms) 404

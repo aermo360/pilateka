@@ -6,7 +6,6 @@ interface ContactData {
     address: string;
     email: string;
     instagramUrl: string;
-    facebookUrl: string;
 }
 
 let contact;
@@ -22,10 +21,9 @@ try {
 if (!contact) {
     contact = {
         studioName: "Pilateka Studio Pilates",
-        address: "ul. Hercena 3-5, 50-453 Wrocław",
+        address: "ul. Hercena 3-5/ 1B\n50-453 Wrocław",
         email: "studio@pilateka.pl",
-        instagramUrl: "#",
-        facebookUrl: "#",
+        instagramUrl: "https://www.instagram.com/pilateka_/",
     };
 }
 ---
@@ -64,32 +62,32 @@ if (!contact) {
                     <li>
                         <a
                             class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
-                            href="/">Główna</a>
+                            href="/">Główna</a
+                        >
                     </li>
                     <li>
                         <a
                             class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
-                            href="/studio/">Studio</a>
+                            href="/studio/">Studio</a
+                        >
                     </li>
                     <li>
                         <a
                             class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
-                            href="/o-mnie/">O Mnie</a>
+                            href="/o-mnie/">O Mnie</a
+                        >
                     </li>
                     <li>
                         <a
                             class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
-                            href="/oferta/">Oferta</a>
+                            href="/oferta/">Oferta</a
+                        >
                     </li>
                     <li>
                         <a
                             class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
-                            href="/eventy/">Eventy</a>
-                    </li>
-                    <li>
-                        <a
-                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
-                            href="/regulamin/">Regulamin</a>
+                            href="/eventy/">Eventy</a
+                        >
                     </li>
                 </ul>
             </div>
@@ -163,13 +161,14 @@ if (!contact) {
                 © {new Date().getFullYear()} Pilateka Studio. Wszelkie prawa zastrzeżone.
             </p>
             <div class="flex space-x-8">
-                <a
-                    class="hover:text-white transition-colors"
-                    href={contact.instagramUrl}>Instagram</a
+                <a class="hover:text-white transition-colors" href="/regulamin/"
+                    >Regulamin</a
                 >
                 <a
                     class="hover:text-white transition-colors"
-                    href={contact.facebookUrl}>Facebook</a
+                    href={contact.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer">Instagram</a
                 >
             </div>
         </div>

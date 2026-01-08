@@ -21,45 +21,41 @@ try {
 if (!data || !Array.isArray(data) || data.length === 0) {
   data = [
     {
-      title: "Reformer",
+      title: "Kameralność",
       description:
-        "Serce studia. Nasze klasyczne reformery zapewniają opór i wsparcie potrzebne do skutecznego wydłużania i wzmacniania mięśni.",
-      icon: "fitness_center",
+        "Trenujemy przede wszystkim indywidualnie i w duetach, co pozwala na pełne skupienie na Twoich potrzebach.",
+      icon: "group_work",
     },
     {
-      title: "Trening Indywidualny",
+      title: "Sprzęt",
       description:
-        "Prywatne sesje dostosowane całkowicie do potrzeb, historii i celów Twojego ciała. Najlepszy sposób na bezpieczny i głęboki progres.",
-      icon: "self_improvement",
+        "Klasyczny sprzęt marek Legacy Pilates oraz V PILATES APPARATUS.",
+      icon: "home_max",
       featured: true,
     },
     {
-      title: "Trening w Duetach",
-      description:
-        "Podziel się doświadczeniem z partnerem. Nasze treningi w duetach zachowują dbałość o szczegóły, oferując jednocześnie wspólną dynamikę.",
-      icon: "groups",
+      title: "Atmosfera",
+      description: "Spokój i minimalizm, które sprzyjają koncentracji.",
+      icon: "spa",
     },
   ];
 }
 ---
 
 <section
-  class="py-20 bg-white dark:bg-surface-dark border-y border-gray-100 dark:border-gray-800"
+  class="py-20 bg-background-light dark:bg-surface-dark border-y border-gray-100 dark:border-gray-800"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 max-w-3xl mx-auto">
       <span
         class="text-sm uppercase tracking-widest text-primary dark:text-white/80 mb-2 block"
-        >Nasza Metoda</span
+        >Co nas wyróżnia</span
       >
       <h2
         class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white mb-6"
       >
-        Klasyczny Pilates na Sprzęcie Premium
+        Dlaczego My?
       </h2>
-      <p class="text-gray-600 dark:text-gray-300 font-light">
-        Poznaj prawdziwą esencję Kontrologii na najwyższej klasy sprzęcie.
-      </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {

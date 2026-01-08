@@ -6,21 +6,6 @@ interface QuoteData {
   author: string;
 }
 
-const fallbacks = [
-  {
-    text: "You can say what Pilates is in three words. Stretch with strength and control",
-    author: "Romana Kryzanowska",
-  },
-  {
-    text: "When you pay attention to detail, the big picture will take care of itself.",
-    author: "Georges St-Pierre",
-  },
-  {
-    text: "Shoulders back and down, chin up, head back",
-    author: "Joseph Pilates",
-  },
-];
-
 let quote;
 try {
   quote = await fetchApi<QuoteData>({
@@ -32,7 +17,10 @@ try {
 }
 
 if (!quote) {
-  quote = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+  quote = {
+    text: "Sprawność fizyczna jest pierwszym warunkiem szczęścia.",
+    author: "JOSEPH PILATES",
+  };
 }
 ---
 
