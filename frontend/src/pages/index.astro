@@ -1,16 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Hero from '../components/Hero.astro';
-import Philosophy from '../components/Philosophy.astro';
-import Gallery from '../components/Gallery.astro';
-import Offering from '../components/Offering.astro';
-import Quote from '../components/Quote.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Hero from "../components/Hero.astro";
+import Philosophy from "../components/Philosophy.astro";
+import Gallery from "../components/Gallery.astro";
+import Offering from "../components/Offering.astro";
+import Quote from "../components/Quote.astro";
+import Footer from "../components/Footer.astro";
 
 // SEO data for home page
 const title = "Studio Pilates Wrocław - Klasyczny Pilates w Centrum";
-const description = "Odkryj klasyczny pilates w Pilateka Wrocław. Kameralne studio, profesjonalny sprzęt i indywidualne podejście do Twojego ciała.";
+const description =
+	"Odkryj klasyczny pilates w Pilateka Wrocław. Kameralne studio, profesjonalny sprzęt i indywidualne podejście do Twojego ciała.";
 ---
 
 <Layout title={title} description={description}>
@@ -19,6 +20,7 @@ const description = "Odkryj klasyczny pilates w Pilateka Wrocław. Kameralne stu
 		<Hero />
 		<Philosophy />
 		<Gallery />
+		<Offering />
 		<Quote />
 	</main>
 	<Footer />
