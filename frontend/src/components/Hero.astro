@@ -19,6 +19,10 @@ try {
     query: 'populate=*' 
   });
 } catch (e) {
+  hero = null;
+}
+
+if (!hero) {
   // Fallback for development if Strapi is not connected
   hero = {
     title: "PILATEKA",

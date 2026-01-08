@@ -1,40 +1,52 @@
 ---
-import { fetchApi } from '../lib/strapi';
+import { fetchApi } from "../lib/strapi";
 
 interface ContactData {
-  studioName: string;
-  address: string;
-  email: string;
-  instagramUrl: string;
-  facebookUrl: string;
+    studioName: string;
+    address: string;
+    email: string;
+    instagramUrl: string;
+    facebookUrl: string;
 }
 
 let contact;
 try {
-  contact = await fetchApi<ContactData>({ 
-    endpoint: 'contact', 
-    query: '' 
-  });
+    contact = await fetchApi<ContactData>({
+        endpoint: "contact",
+        query: "",
+    });
 } catch (e) {
-  contact = {
-    studioName: "Pilateka Studio Pilates",
-    address: "ul. Hercena 3-5, 50-453 Wrocław",
-    email: "studio@pilateka.pl",
-    instagramUrl: "#",
-    facebookUrl: "#"
-  };
+    contact = null;
+}
+
+if (!contact) {
+    contact = {
+        studioName: "Pilateka Studio Pilates",
+        address: "ul. Hercena 3-5, 50-453 Wrocław",
+        email: "studio@pilateka.pl",
+        instagramUrl: "#",
+        facebookUrl: "#",
+    };
 }
 ---
 
 <footer class="bg-primary text-white py-20 lg:py-24 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8"
+        >
             {/* Brand Section */}
             <div class="space-y-8">
                 <a class="inline-block group" href="/">
-                    <img src="/logo.jpg" alt="Pilateka Logo" class="h-10 md:h-12 w-auto invert transition-all group-hover:opacity-90" />
+                    <img
+                        src="/logo.jpg"
+                        alt="Pilateka Logo"
+                        class="h-10 md:h-12 w-auto invert transition-all group-hover:opacity-90"
+                    />
                 </a>
-                <p class="text-blue-50/70 font-light text-sm leading-relaxed max-w-xs italic">
+                <p
+                    class="text-blue-50/70 font-light text-sm leading-relaxed max-w-xs italic"
+                >
                     {contact.studioName}
                     <br />
                     Kameralne Studio Pilates, Wrocław, Polska
@@ -43,30 +55,73 @@ try {
 
             {/* Links Section */}
             <div>
-                <h4 class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-blue-200/50">Menu</h4>
+                <h4
+                    class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-blue-200/50"
+                >
+                    Menu
+                </h4>
                 <ul class="space-y-4">
-                    <li><a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href="/">Główna</a></li>
-                    <li><a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href="/studio">Studio</a></li>
-                    <li><a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href="/o-mnie">O Mnie</a></li>
-                    <li><a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href="/oferta">Oferta</a></li>
-                    <li><a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href="/eventy">Eventy</a></li>
-                    <li><a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href="/regulamin">Regulamin</a></li>
+                    <li>
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href="/">Główna</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href="/studio">Studio</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href="/o-mnie">O Mnie</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href="/oferta">Oferta</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href="/eventy">Eventy</a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href="/regulamin">Regulamin</a>
+                    </li>
                 </ul>
             </div>
 
             {/* Contact Section */}
             <div>
-                <h4 class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-blue-200/50">Kontakt</h4>
+                <h4
+                    class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-blue-200/50"
+                >
+                    Kontakt
+                </h4>
                 <ul class="space-y-6">
                     <li class="flex items-start group">
-                        <span class="material-icons-outlined text-blue-300 mr-3 text-lg opacity-60">place</span>
-                        <span class="text-sm font-light text-blue-50/80 leading-relaxed whitespace-pre-line">
+                        <span
+                            class="material-icons-outlined text-blue-300 mr-3 text-lg opacity-60"
+                            >place</span
+                        >
+                        <span
+                            class="text-sm font-light text-blue-50/80 leading-relaxed whitespace-pre-line"
+                        >
                             {contact.address}
                         </span>
                     </li>
                     <li class="flex items-center group">
-                        <span class="material-icons-outlined text-blue-300 mr-3 text-lg opacity-60">mail_outline</span>
-                        <a class="text-sm font-light text-blue-50/80 hover:text-white transition-colors" href={`mailto:${contact.email}`}>
+                        <span
+                            class="material-icons-outlined text-blue-300 mr-3 text-lg opacity-60"
+                            >mail_outline</span
+                        >
+                        <a
+                            class="text-sm font-light text-blue-50/80 hover:text-white transition-colors"
+                            href={`mailto:${contact.email}`}
+                        >
                             {contact.email}
                         </a>
                     </li>
@@ -75,24 +130,47 @@ try {
 
             {/* Newsletter Section */}
             <div>
-                <h4 class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-blue-200/50">Newsletter</h4>
-                <p class="text-sm font-light text-blue-50/70 mb-6">Bądź na bieżąco z naszymi nowościami.</p>
+                <h4
+                    class="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-blue-200/50"
+                >
+                    Newsletter
+                </h4>
+                <p class="text-sm font-light text-blue-50/70 mb-6">
+                    Bądź na bieżąco z naszymi nowościami.
+                </p>
                 <form class="space-y-4" onsubmit="return false;">
                     <div class="relative group">
-                        <input class="w-full bg-white/5 border border-white/10 py-3 px-4 text-sm text-white focus:outline-none focus:border-white/30 transition-all placeholder:text-white/20" placeholder="Adres e-mail" type="email"/>
+                        <input
+                            class="w-full bg-white/5 border border-white/10 py-3 px-4 text-sm text-white focus:outline-none focus:border-white/30 transition-all placeholder:text-white/20"
+                            placeholder="Adres e-mail"
+                            type="email"
+                        />
                     </div>
-                    <button class="w-full bg-white text-primary hover:bg-blue-50 transition-all py-3 text-[10px] font-bold uppercase tracking-widest" type="submit">
+                    <button
+                        class="w-full bg-white text-primary hover:bg-blue-50 transition-all py-3 text-[10px] font-bold uppercase tracking-widest"
+                        type="submit"
+                    >
                         Zapisz się
                     </button>
                 </form>
             </div>
         </div>
 
-        <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.2em] font-medium text-blue-200/40">
-            <p>© {new Date().getFullYear()} Pilateka Studio. Wszelkie prawa zastrzeżone.</p>
+        <div
+            class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] uppercase tracking-[0.2em] font-medium text-blue-200/40"
+        >
+            <p>
+                © {new Date().getFullYear()} Pilateka Studio. Wszelkie prawa zastrzeżone.
+            </p>
             <div class="flex space-x-8">
-                <a class="hover:text-white transition-colors" href={contact.instagramUrl}>Instagram</a>
-                <a class="hover:text-white transition-colors" href={contact.facebookUrl}>Facebook</a>
+                <a
+                    class="hover:text-white transition-colors"
+                    href={contact.instagramUrl}>Instagram</a
+                >
+                <a
+                    class="hover:text-white transition-colors"
+                    href={contact.facebookUrl}>Facebook</a
+                >
             </div>
         </div>
     </div>

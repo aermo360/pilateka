@@ -1,0 +1,130 @@
+
+> cms@0.1.0 develop
+> strapi develop
+
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (3ms)
+- Loading Strapi
+[2026-01-08 01:22:47.161] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+[2026-01-08 01:22:47.319] [33mwarn[39m: Encryption key is missing from admin.secrets.encryptionKey configuration
+[2026-01-08 01:22:47.321] [33mwarn[39m: Encryption key is missing from admin.secrets.encryptionKey configuration
+- Building build context
+
+(node:44396) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (77ms)
+- Creating admin
+✔ Creating admin (681ms)
+✔ Loading Strapi (1839ms)
+- Generating types
+✔ Generating types (103ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (6ms)
+✔ Compiling TS (963ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Thu Jan 08 2026 01:22:49 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 2913 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 44396                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-08 01:22:49.178] [32minfo[39m: Strapi started successfully
+[2026-01-08 01:22:49.355] [32mhttp[39m: GET /admin (44 ms) 200
+[2026-01-08 01:22:50.940] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 01:22:51.057] [32mhttp[39m: GET /admin/init (5 ms) 200
+1:22:57 AM [vite] page reload .strapi/client/index.html
+1:22:57 AM [vite] page reload .strapi/client/app.js
+[2026-01-08 01:22:57.962] [32mhttp[39m: GET /admin/auth/register-admin (6 ms) 200
+[2026-01-08 01:22:58.166] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 01:22:58.209] [32mhttp[39m: GET /favicon.ico (1 ms) 200
+[2026-01-08 01:22:58.242] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 01:24:48.953] [32mhttp[39m: GET /api/hero-section?populate=* (6 ms) 404
+[2026-01-08 01:24:48.953] [32mhttp[39m: GET /api/philosophy?populate=* (4 ms) 404
+[2026-01-08 01:24:48.956] [32mhttp[39m: GET /api/gallery-items?populate=* (5 ms) 404
+[2026-01-08 01:24:48.958] [32mhttp[39m: GET /api/quote (4 ms) 404
+[2026-01-08 01:24:48.958] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:25:12.830] [32mhttp[39m: GET /api/hero-section?populate=* (2 ms) 404
+[2026-01-08 01:25:12.833] [32mhttp[39m: GET /api/philosophy?populate=* (4 ms) 404
+[2026-01-08 01:25:12.835] [32mhttp[39m: GET /api/gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:25:12.836] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:25:12.837] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:25:35.320] [32mhttp[39m: GET /api/hero-section?populate=* (3 ms) 404
+[2026-01-08 01:25:35.320] [32mhttp[39m: GET /api/philosophy?populate=* (2 ms) 404
+[2026-01-08 01:25:35.323] [32mhttp[39m: GET /api/gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:25:35.325] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:25:35.326] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:25:59.641] [32mhttp[39m: GET /api/hero-section?populate=* (2 ms) 404
+[2026-01-08 01:25:59.643] [32mhttp[39m: GET /api/philosophy?populate=* (2 ms) 404
+[2026-01-08 01:25:59.645] [32mhttp[39m: GET /api/gallery-items?populate=* (3 ms) 404
+[2026-01-08 01:25:59.646] [32mhttp[39m: GET /api/quote (3 ms) 404
+[2026-01-08 01:25:59.646] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:26:09.966] [32mhttp[39m: GET /api/hero-section?populate=* (2 ms) 404
+[2026-01-08 01:26:09.966] [32mhttp[39m: GET /api/philosophy?populate=* (1 ms) 404
+[2026-01-08 01:26:09.972] [32mhttp[39m: GET /api/gallery-items?populate=* (5 ms) 404
+[2026-01-08 01:26:09.975] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:26:09.976] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:26:20.429] [32mhttp[39m: GET /api/hero-section?populate=* (2 ms) 404
+[2026-01-08 01:26:20.430] [32mhttp[39m: GET /api/philosophy?populate=* (2 ms) 404
+[2026-01-08 01:26:20.432] [32mhttp[39m: GET /api/gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:26:20.434] [32mhttp[39m: GET /api/quote (3 ms) 404
+[2026-01-08 01:26:20.434] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:26:33.111] [32mhttp[39m: GET /api/hero-section?populate=* (3 ms) 404
+[2026-01-08 01:26:33.114] [32mhttp[39m: GET /api/philosophy?populate=* (4 ms) 404
+[2026-01-08 01:26:33.119] [32mhttp[39m: GET /api/quote (4 ms) 404
+[2026-01-08 01:26:33.120] [32mhttp[39m: GET /api/gallery-items?populate=* (7 ms) 404
+[2026-01-08 01:26:33.130] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 01:26:47.130] [32mhttp[39m: GET /api/hero-section?populate=* (9 ms) 404
+[2026-01-08 01:26:47.137] [32mhttp[39m: GET /api/philosophy?populate=* (12 ms) 404
+[2026-01-08 01:26:47.147] [32mhttp[39m: GET /api/gallery-items?populate=* (14 ms) 404
+[2026-01-08 01:26:47.148] [32mhttp[39m: GET /api/quote (8 ms) 404
+[2026-01-08 01:26:47.153] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:26:55.770] [32mhttp[39m: GET /api/hero-section?populate=* (6 ms) 404
+[2026-01-08 01:26:55.773] [32mhttp[39m: GET /api/philosophy?populate=* (6 ms) 404
+[2026-01-08 01:26:55.775] [32mhttp[39m: GET /api/gallery-items?populate=* (3 ms) 404
+[2026-01-08 01:26:55.776] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:26:55.777] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:27:07.771] [32mhttp[39m: GET /api/philosophy?populate=* (1 ms) 404
+[2026-01-08 01:27:07.772] [32mhttp[39m: GET /api/hero-section?populate=* (4 ms) 404
+[2026-01-08 01:27:07.773] [32mhttp[39m: GET /api/gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:27:07.776] [32mhttp[39m: GET /api/quote (4 ms) 404
+[2026-01-08 01:27:07.777] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:27:16.761] [32mhttp[39m: GET /api/hero-section?populate=* (6 ms) 404
+[2026-01-08 01:27:16.761] [32mhttp[39m: GET /api/philosophy?populate=* (5 ms) 404
+[2026-01-08 01:27:16.763] [32mhttp[39m: GET /api/gallery-items?populate=* (6 ms) 404
+[2026-01-08 01:27:16.765] [32mhttp[39m: GET /api/quote (3 ms) 404
+[2026-01-08 01:27:16.766] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:27:25.757] [32mhttp[39m: GET /api/hero-section?populate=* (4 ms) 404
+[2026-01-08 01:27:25.758] [32mhttp[39m: GET /api/philosophy?populate=* (3 ms) 404
+[2026-01-08 01:27:25.760] [32mhttp[39m: GET /api/gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:27:25.761] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:27:25.761] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:27:36.755] [32mhttp[39m: GET /api/hero-section?populate=* (3 ms) 404
+[2026-01-08 01:27:36.756] [32mhttp[39m: GET /api/philosophy?populate=* (3 ms) 404
+[2026-01-08 01:27:36.759] [32mhttp[39m: GET /api/gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:27:36.760] [32mhttp[39m: GET /api/quote (3 ms) 404
+[2026-01-08 01:27:36.760] [32mhttp[39m: GET /api/contact (1 ms) 404

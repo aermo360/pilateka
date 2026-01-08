@@ -1,6 +1,6 @@
 ---
-import { fetchApi } from '../lib/strapi';
-import { Image } from 'astro:assets';
+import { fetchApi } from "../lib/strapi";
+import { Image } from "astro:assets";
 
 interface PhilosophyData {
   label: string;
@@ -15,58 +15,80 @@ interface PhilosophyData {
 
 let data;
 try {
-  data = await fetchApi<PhilosophyData>({ 
-    endpoint: 'philosophy', 
-    query: 'populate=*' 
+  data = await fetchApi<PhilosophyData>({
+    endpoint: "philosophy",
+    query: "populate=*",
   });
 } catch (e) {
+  data = null;
+}
+
+if (!data) {
   data = {
     label: "Filozofia",
     title: "Uważny ruch dla zrównoważonego życia.",
-    description1: "W Pilatece wierzymy, że prawdziwa siła pochodzi z wnętrza. Nasze studio, położone w spokojnej części Wrocławia, oferuje schronienie od miejskiego zgiełku. Skupiamy się na klasycznych metodach Pilatesu, wzbogaconych o współczesną wiedzę z zakresu biomechaniki.",
-    description2: "Niezależnie od tego, czy przechodzisz rehabilitację po kontuzji, czy chcesz pogłębić swoją praktykę fizyczną, nasi certyfikowani instruktorzy poprowadzą Cię z precyzją i troską w kameralnym, minimalistycznym wnętrzu stworzonym do koncentracji.",
+    description1:
+      "W Pilatece wierzymy, że prawdziwa siła pochodzi z wnętrza. Nasze studio, położone w spokojnej części Wrocławia, oferuje schronienie od miejskiego zgiełku. Skupiamy się na klasycznych metodach Pilatesu, wzbogaconych o współczesną wiedzę z zakresu biomechaniki.",
+    description2:
+      "Niezależnie od tego, czy przechodzisz rehabilitację po kontuzji, czy chcesz pogłębić swoją praktykę fizyczną, nasi certyfikowani instruktorzy poprowadzą Cię z precyzją i troską w kameralnym, minimalistycznym wnętrzu stworzonym do koncentracji.",
     image: {
       url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCai6DyCMfcPhqGcuzvFviq1QuCTqX49Cz075Xs1U_LAs7wdT2AUUhoruxuNmU7MtrzkthQ5Aa_aSEbl7i0OM3jPae6nA-WnUtRdIyTT3L5ZjwyrUKmOX2mExp-nSJBCPT0FQL-ArhOFoNLUywhy0mB9tHsCARYqcFF544DJWZuvMvqYTfPlO7jJjPY8s2AvCz7BMmVioGC685lw7MCeU9_CxJrj_K-pss3QZd-gnMlRbYuxqU_1-okYYhIJBYk6bFN03nPqMnI2Gk",
-      alternativeText: "Minimalistyczne wnętrze studia pilates z naturalnym światłem"
-    }
+      alternativeText:
+        "Minimalistyczne wnętrze studia pilates z naturalnym światłem",
+    },
   };
 }
 
-const strapiUrl = import.meta.env.STRAPI_URL || '';
-const imageUrl = data.image.url.startsWith('http') 
-  ? data.image.url 
+const strapiUrl = import.meta.env.STRAPI_URL || "";
+const imageUrl = data.image.url.startsWith("http")
+  ? data.image.url
   : `${strapiUrl}${data.image.url}`;
 ---
 
-<section class="py-24 bg-surface-light dark:bg-surface-dark transition-colors duration-300" id="studio">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <span class="text-primary text-sm uppercase tracking-[0.2em] font-medium block mb-2">Jak pracuję?</span>
-                <h3 class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white leading-tight">
-                    {data.title}
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-                    {data.description1}
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-                    {data.description2}
-                </p>
-                <div class="pt-4">
-                    <a class="inline-flex items-center text-primary dark:text-white hover:underline underline-offset-4 decoration-1 uppercase tracking-widest text-sm" href="#">
-                        Poznaj naszą historię <span class="material-icons-outlined ml-2 text-sm">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-            <div class="relative h-96 md:h-[500px] w-full bg-gray-200 dark:bg-gray-800 overflow-hidden shadow-xl">
-                <Image 
-                    src={imageUrl} 
-                    alt={data.image.alternativeText}
-                    width={800}
-                    height={1000}
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
-                />
-            </div>
+<section
+  class="py-24 bg-surface-light dark:bg-surface-dark transition-colors duration-300"
+  id="studio"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="space-y-6">
+        <span
+          class="text-primary text-sm uppercase tracking-[0.2em] font-medium block mb-2"
+          >Jak pracuję?</span
+        >
+        <h3
+          class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white leading-tight"
+        >
+          {data.title}
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+          {data.description1}
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+          {data.description2}
+        </p>
+        <div class="pt-4">
+          <a
+            class="inline-flex items-center text-primary dark:text-white hover:underline underline-offset-4 decoration-1 uppercase tracking-widest text-sm"
+            href="#"
+          >
+            Poznaj naszą historię <span
+              class="material-icons-outlined ml-2 text-sm">arrow_forward</span
+            >
+          </a>
         </div>
+      </div>
+      <div
+        class="relative h-96 md:h-[500px] w-full bg-gray-200 dark:bg-gray-800 overflow-hidden shadow-xl"
+      >
+        <Image
+          src={imageUrl}
+          alt={data.image.alternativeText}
+          width={800}
+          height={1000}
+          class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+        />
+      </div>
     </div>
+  </div>
 </section>

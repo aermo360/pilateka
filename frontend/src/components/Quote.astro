@@ -1,5 +1,5 @@
 ---
-import { fetchApi } from '../lib/strapi';
+import { fetchApi } from "../lib/strapi";
 
 interface QuoteData {
   text: string;
@@ -7,28 +7,47 @@ interface QuoteData {
 }
 
 const fallbacks = [
-  { text: "You can say what Pilates is in three words. Stretch with strength and control", author: "Romana Kryzanowska" },
-  { text: "When you pay attention to detail, the big picture will take care of itself.", author: "Georges St-Pierre" },
-  { text: "Shoulders back and down, chin up, head back", author: "Joseph Pilates" }
+  {
+    text: "You can say what Pilates is in three words. Stretch with strength and control",
+    author: "Romana Kryzanowska",
+  },
+  {
+    text: "When you pay attention to detail, the big picture will take care of itself.",
+    author: "Georges St-Pierre",
+  },
+  {
+    text: "Shoulders back and down, chin up, head back",
+    author: "Joseph Pilates",
+  },
 ];
 
 let quote;
 try {
-  quote = await fetchApi<QuoteData>({ 
-    endpoint: 'quote', 
-    query: '' 
+  quote = await fetchApi<QuoteData>({
+    endpoint: "quote",
+    query: "",
   });
 } catch (e) {
+  quote = null;
+}
+
+if (!quote) {
   quote = fallbacks[Math.floor(Math.random() * fallbacks.length)];
 }
 ---
 
 <section class="py-24 bg-primary text-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <span class="material-icons-outlined text-4xl mb-8 opacity-40">format_quote</span>
-        <blockquote class="text-[32px] leading-[35px] font-accent font-light italic mb-10 max-w-4xl mx-auto">
-            "{quote.text}"
-        </blockquote>
-        <cite class="not-italic uppercase tracking-widest text-sm opacity-80">— {quote.author}</cite>
-    </div>
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <span class="material-icons-outlined text-4xl mb-8 opacity-40"
+      >format_quote</span
+    >
+    <blockquote
+      class="text-[32px] leading-[35px] font-accent font-light italic mb-10 max-w-4xl mx-auto"
+    >
+      "{quote.text}"
+    </blockquote>
+    <cite class="not-italic uppercase tracking-widest text-sm opacity-80"
+      >— {quote.author}</cite
+    >
+  </div>
 </section>

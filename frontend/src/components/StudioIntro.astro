@@ -1,6 +1,6 @@
 ---
-import { fetchApi } from '../lib/strapi';
-import { Image } from 'astro:assets';
+import { fetchApi } from "../lib/strapi";
+import { Image } from "astro:assets";
 
 interface StudioIntroData {
   title: string;
@@ -14,58 +14,79 @@ interface StudioIntroData {
 
 let data;
 try {
-  data = await fetchApi<StudioIntroData>({ 
-    endpoint: 'studio-intro', 
-    query: 'populate=*' 
+  data = await fetchApi<StudioIntroData>({
+    endpoint: "studio-intro",
+    query: "populate=*",
   });
 } catch (e) {
+  data = null;
+}
+
+if (!data) {
   data = {
     title: "Kameralna i Dopracowana",
-    description: "Studio to kameralna, starannie dopracowana przestrzeń, w której na wysokiej klasy sprzęcie możesz poznać pilates w jego klasycznej odsłonie. W studio odbywają się treningi indywidualne i w duetach.",
+    description:
+      "Studio to kameralna, starannie dopracowana przestrzeń, w której na wysokiej klasy sprzęcie możesz poznać pilates w jego klasycznej odsłonie. W studio odbywają się treningi indywidualne i w duetach.",
     rulebookLink: "/regulamin",
     images: [
       {
         url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBk53t3u1Zd5epRimCYMJ1oesqAODSmXUAZJ-_PO9R1wEnBwY2qU-XT_fe5oGGZ-MYvXi-_zSVVK0U8Gj2Hxxbrj6_Q_FciTFsxH2wd0hcJmGpAHg_uae9pto4vhzi2QaLroBAcDjjiYoN05JTMrttQ2z-QC30jPhLP6FuV9prSE5RAuT2UcUyqNTpRELAOfKhOGVEa3BDTNHya9j5VQCOEX15qfCKB2rmqjjIw1tCsugsrgKrR_ilxz2Glrnh4iM5Wy3d1JsXJcUg",
-        alternativeText: "Detail of pilates equipment"
+        alternativeText: "Detail of pilates equipment",
       },
       {
         url: "https://lh3.googleusercontent.com/aida-public/AB6AXuALRW9AfSmMAB8i0oz5uGdILR1LQ0yt3WaaMZ49IYOY7IUNU1L_kgIHFm0L1CHCfBNe2R6KjT4UgEQk-aVwmxBeVXoyM5goyQmZh6fawSJ17HzvqYVTbheixNV583p_cFvh1lNpSZEGNgstCkg7CDXCtme21OzJXlYj93ll9dLRnk_HXehwS8BA2ZymL2-wCK6CatJ_JgPkT7rsoczS31K6H9qKtcJawmoKZku98KJGJSw485QFuUNuQsyeByWoGQdIR86-Q9vN7UA",
-        alternativeText: "Bright pilates studio interior"
-      }
-    ]
+        alternativeText: "Bright pilates studio interior",
+      },
+    ],
   };
 }
 
-const strapiUrl = import.meta.env.STRAPI_URL || '';
+const strapiUrl = import.meta.env.STRAPI_URL || "";
 ---
 
 <section class="py-20 md:py-32 bg-background-light dark:bg-background-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 space-y-8">
-                <h2 class="text-3xl md:text-4xl font-display text-primary dark:text-white">{data.title}</h2>
-                <div class="w-16 h-0.5 bg-primary dark:bg-white/30"></div>
-                <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light text-lg">
-                    {data.description}
-                </p>
-                <div class="pt-4">
-                    <a class="inline-flex items-center text-primary dark:text-white border-b border-primary dark:border-white pb-1 hover:opacity-70 transition-opacity" href={data.rulebookLink}>
-                        <span class="material-icons-outlined text-sm mr-2">description</span>
-                        <span class="text-sm uppercase tracking-widest">Link do regulaminu</span>
-                    </a>
-                </div>
-            </div>
-            <div class="order-1 md:order-2 grid grid-cols-2 gap-4">
-                {data.images.map((img, index) => (
-                    <Image 
-                        src={img.url.startsWith('http') ? img.url : `${strapiUrl}${img.url}`} 
-                        alt={img.alternativeText}
-                        width={400}
-                        height={600}
-                        class={`w-full h-80 object-cover rounded-sm shadow-sm ${index === 0 ? 'transform translate-y-8' : ''}`}
-                    />
-                ))}
-            </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="order-2 md:order-1 space-y-8">
+        <h2
+          class="text-3xl md:text-4xl font-display text-primary dark:text-white"
+        >
+          {data.title}
+        </h2>
+        <div class="w-16 h-0.5 bg-primary dark:bg-white/30"></div>
+        <p
+          class="text-gray-600 dark:text-gray-300 leading-relaxed font-light text-lg"
+        >
+          {data.description}
+        </p>
+        <div class="pt-4">
+          <a
+            class="inline-flex items-center text-primary dark:text-white border-b border-primary dark:border-white pb-1 hover:opacity-70 transition-opacity"
+            href={data.rulebookLink}
+          >
+            <span class="material-icons-outlined text-sm mr-2">description</span
+            >
+            <span class="text-sm uppercase tracking-widest"
+              >Link do regulaminu</span
+            >
+          </a>
         </div>
+      </div>
+      <div class="order-1 md:order-2 grid grid-cols-2 gap-4">
+        {
+          data.images.map((img, index) => (
+            <Image
+              src={
+                img.url.startsWith("http") ? img.url : `${strapiUrl}${img.url}`
+              }
+              alt={img.alternativeText}
+              width={400}
+              height={600}
+              class={`w-full h-80 object-cover rounded-sm shadow-sm ${index === 0 ? "transform translate-y-8" : ""}`}
+            />
+          ))
+        }
+      </div>
     </div>
+  </div>
 </section>
