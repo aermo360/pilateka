@@ -385,3 +385,113 @@ Create your first administrator 💻 by going to the administration panel at:
 [2026-01-08 01:46:57.949] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
 [2026-01-08 01:46:57.949] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
 [2026-01-08 01:46:57.950] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:47:24.876] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:47:24.878] [32mhttp[39m: GET /api/studio-intro?populate=* (5 ms) 404
+[2026-01-08 01:47:24.893] [32mhttp[39m: GET /api/studio-methods (16 ms) 404
+[2026-01-08 01:47:24.894] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (9 ms) 404
+[2026-01-08 01:47:24.894] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 01:47:38.041] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:47:38.041] [32mhttp[39m: GET /api/studio-intro?populate=* (2 ms) 404
+[2026-01-08 01:47:38.043] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:47:38.044] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:47:38.047] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:47:48.514] [32mhttp[39m: GET /api/studio-hero?populate=* (4 ms) 404
+[2026-01-08 01:47:48.515] [32mhttp[39m: GET /api/studio-intro?populate=* (3 ms) 404
+[2026-01-08 01:47:48.518] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:47:48.527] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (11 ms) 404
+[2026-01-08 01:47:48.528] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:48:32.918] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:48:32.924] [32mhttp[39m: GET /api/studio-intro?populate=* (7 ms) 404
+[2026-01-08 01:48:32.929] [32mhttp[39m: GET /api/studio-methods (9 ms) 404
+[2026-01-08 01:48:32.931] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (5 ms) 404
+[2026-01-08 01:48:32.934] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 01:48:43.388] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:48:43.389] [32mhttp[39m: GET /api/studio-intro?populate=* (3 ms) 404
+[2026-01-08 01:48:43.400] [32mhttp[39m: GET /api/studio-methods (11 ms) 404
+[2026-01-08 01:48:43.400] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (5 ms) 404
+[2026-01-08 01:48:43.401] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 01:49:10.198] [32mhttp[39m: GET /api/studio-hero?populate=* (6 ms) 404
+[2026-01-08 01:49:10.206] [32mhttp[39m: GET /api/studio-intro?populate=* (10 ms) 404
+[2026-01-08 01:49:10.211] [32mhttp[39m: GET /api/studio-methods (11 ms) 404
+[2026-01-08 01:49:10.213] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (7 ms) 404
+[2026-01-08 01:49:10.213] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:49:39.954] [32mhttp[39m: GET /api/hero-section?populate=* (4 ms) 404
+[2026-01-08 01:49:39.958] [32mhttp[39m: GET /api/philosophy?populate=* (6 ms) 404
+[2026-01-08 01:49:39.960] [32mhttp[39m: GET /api/gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:49:39.961] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:49:39.962] [32mhttp[39m: GET /api/contact (2 ms) 404
+1:50:47 AM [vite] page reload .strapi/client/index.html
+[2026-01-08 01:50:48.745] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 01:50:49.151] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 01:50:52.905] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 01:51:15.997] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (5ms)
+[2026-01-08 01:51:16.986] [32minfo[39m: Shutting down Strapi
+[2026-01-08 01:51:16.988] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-08 01:51:19.377] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:49178) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (43ms)
+- Creating admin
+✔ Creating admin (238ms)
+✔ Loading Strapi (1034ms)
+- Generating types
+✔ Generating types (85ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (967ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Thu Jan 08 2026 01:51:20 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 2099 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 49178                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-08 01:51:20.775] [32minfo[39m: Strapi started successfully
+[2026-01-08 01:51:20.898] [32mhttp[39m: GET /admin (24 ms) 200
+[2026-01-08 01:51:21.346] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 01:51:21.480] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 01:51:21.490] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 01:51:21.825] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+1:51:52 AM [vite] page reload .strapi/client/app.js
+1:51:53 AM [vite] page reload .strapi/client/index.html
+[2026-01-08 01:51:53.683] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 01:51:53.738] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 01:51:54.002] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 01:51:54.103] [32mhttp[39m: GET /admin/init (1 ms) 200
+[2026-01-08 01:51:54.743] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 01:51:54.941] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 01:52:18.564] [32mhttp[39m: GET /api/studio-hero?populate=* (13 ms) 404
+[2026-01-08 01:52:18.578] [32mhttp[39m: GET /api/studio-intro?populate=* (19 ms) 404
+[2026-01-08 01:52:18.580] [32mhttp[39m: GET /api/studio-methods (5 ms) 404
+[2026-01-08 01:52:18.581] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:52:18.582] [32mhttp[39m: GET /api/contact (3 ms) 404

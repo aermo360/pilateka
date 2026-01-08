@@ -14,7 +14,6 @@ RUN npm run build
 # Stage 2: Serve
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
-# Default nginx config is usually fine for static Astro, 
-# but we might need a custom one for SPA-like routing if used.
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
