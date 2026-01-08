@@ -75,31 +75,36 @@ const events = [
                 >
                     <div class="space-y-8">
                         <span
-                            class="text-[0.6rem] uppercase tracking-[0.3em] text-primary dark:text-gray-400 font-medium border-b border-primary/20 pb-2 inline-block"
-                            >Pasja</span
+                            class="text-[10px] uppercase tracking-[0.4em] text-primary dark:text-gray-400 font-bold mb-4 block"
+                            >IDEA</span
                         >
                         <h2
-                            class="text-3xl md:text-4xl font-accent text-primary dark:text-white leading-tight uppercase tracking-widest italic"
+                            class="text-4xl md:text-6xl font-display text-primary dark:text-white leading-tight tracking-tight shadow-none"
                         >
                             Zadbaj o ciało i umysł w wyjątkowych
                             okolicznościach.
                         </h2>
-                        <p
-                            class="text-gray-600 dark:text-gray-300 font-light leading-relaxed text-lg italic mt-4"
+                        <div
+                            class="space-y-6 text-gray-500 dark:text-gray-400 font-light leading-relaxed text-lg"
                         >
-                            Nasze wyjazdy to coś więcej niż tylko treningi. To
-                            czas na oddech, odnalezienie siły, stabilności i
-                            głęboki odpoczynek. Starannie wybieramy lokalizacje
-                            blisko natury, w otoczeniu inspirującej
-                            architektury, działając w duchu slow i uważności.
-                            Organizujemy wyjazdy w najpiękniejsze zakątki Polski
-                            i Europy. To idealna okazja, by pogłębić swoją
-                            praktykę i poznać pasjonatów metody i nie tylko
-                            odpocząć.
-                        </p>
+                            <p>
+                                Nasze wyjazdy to coś więcej niż tylko trening.
+                                To czas na oddech, oderwanie się od codzienności
+                                i głęboką regenerację. Łączymy intensywną
+                                praktykę klasycznego pilatesu z relaksem w
+                                otoczeniu natury.
+                            </p>
+                            <p>
+                                Organizujemy warsztaty tematyczne w studio oraz
+                                weekendowe i tygodniowe wyjazdy w najpiękniejsze
+                                zakątki Polski i Europy. To idealna okazja, by
+                                pogłębić swoją wiedzę o ciele, poznać pasjonatów
+                                metody i po prostu odpocząć.
+                            </p>
+                        </div>
                     </div>
                     <div
-                        class="relative aspect-[4/3] overflow-hidden shadow-2xl rounded-sm"
+                        class="relative aspect-[4/3] overflow-hidden shadow-sm rounded-sm"
                     >
                         <Image
                             src="https://images.unsplash.com/photo-1518611012118-29a8d63e8c2c?q=80&w=1200&auto=format&fit=crop"
@@ -118,7 +123,7 @@ const events = [
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2
-                        class="text-4xl md:text-5xl font-accent text-primary dark:text-white mb-4 uppercase tracking-widest italic"
+                        class="text-4xl md:text-5xl font-accent text-primary dark:text-white mb-4 uppercase tracking-widest"
                     >
                         Nadchodzące Wydarzenia
                     </h2>
@@ -135,7 +140,7 @@ const events = [
                         events.map((event) => (
                             <a
                                 href={event.link}
-                                class="group bg-white dark:bg-surface-dark shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
+                                class="group bg-white dark:bg-surface-dark shadow-sm hover:shadow-md transition-all duration-500 overflow-hidden flex flex-col"
                             >
                                 <div class="relative h-80 overflow-hidden">
                                     <Image
@@ -143,29 +148,29 @@ const events = [
                                         alt={event.title}
                                         width={800}
                                         height={600}
-                                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                     />
                                     <div class="absolute top-4 left-4">
-                                        <span class="bg-primary/90 text-white text-[10px] tracking-[0.2em] font-bold px-4 py-2 uppercase rounded-sm">
+                                        <span class="bg-primary/95 text-white text-[10px] tracking-[0.2em] font-bold px-4 py-2 uppercase">
                                             {event.type}
                                         </span>
                                     </div>
                                 </div>
-                                <div class="p-8 flex-1 flex flex-col">
+                                <div class="p-8 md:p-10 flex-1 flex flex-col">
                                     <div class="text-[10px] tracking-[0.2em] text-gray-400 dark:text-gray-500 font-medium mb-3 uppercase">
                                         {event.date} | {event.location}
                                     </div>
-                                    <h3 class="text-2xl font-accent text-primary dark:text-white mb-4 group-hover:text-primary transition-colors uppercase tracking-widest italic">
+                                    <h3 class="text-2xl font-accent text-primary dark:text-white mb-4 group-hover:text-primary transition-colors uppercase tracking-widest">
                                         {event.title}
                                     </h3>
                                     <p class="text-gray-400 dark:text-gray-500 font-light text-sm leading-relaxed mb-8 line-clamp-2">
                                         {event.description}
                                     </p>
-                                    <div class="mt-auto flex justify-between items-center pt-6 border-t border-gray-100 dark:border-gray-800">
-                                        <span class="text-lg font-accent font-semibold text-primary dark:text-white">
+                                    <div class="mt-auto flex justify-between items-center pt-8 border-t border-gray-50 dark:border-gray-800">
+                                        <span class="text-lg font-accent font-bold text-primary dark:text-white">
                                             {event.price}
                                         </span>
-                                        <span class="text-[10px] tracking-[0.2em] font-bold uppercase text-primary border-b border-primary/20 group-hover:border-primary transition-all pb-1">
+                                        <span class="text-[10px] tracking-[0.2em] font-bold uppercase text-primary border-b border-transparent group-hover:border-primary transition-all pb-1">
                                             {event.status}
                                         </span>
                                     </div>

@@ -53,26 +53,32 @@ const imageUrl = data.image.url.startsWith("http")
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div class="space-y-6">
         <span
-          class="text-primary text-sm uppercase tracking-[0.2em] font-medium block mb-2"
+          class="text-primary dark:text-gray-400 text-[10px] uppercase tracking-[0.4em] font-bold block mb-6 px-1"
           >{data.label}</span
         >
         <h3
-          class="text-3xl md:text-4xl font-display text-gray-900 dark:text-white leading-tight"
+          class="text-4xl md:text-5xl font-display text-primary dark:text-white leading-tight mb-10"
         >
           {data.title}
         </h3>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-          {data.description1}
-        </p>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed font-light">
-          {data.description2}
-        </p>
-        <div class="pt-4">
+        <div class="space-y-6">
+          <p
+            class="text-gray-500 dark:text-gray-400 leading-relaxed font-light text-lg"
+          >
+            {data.description1}
+          </p>
+          <p
+            class="text-gray-500 dark:text-gray-400 leading-relaxed font-light text-lg"
+          >
+            {data.description2}
+          </p>
+        </div>
+        <div class="pt-10">
           <a
-            class="inline-flex items-center text-primary dark:text-white hover:underline underline-offset-4 decoration-1 uppercase tracking-widest text-sm"
+            class="inline-block text-primary dark:text-white font-bold uppercase tracking-[0.2em] text-[10px] border-b border-primary/20 hover:border-primary transition-all pb-1"
             href="/o-mnie/"
           >
-            POZNAJ NASZĄ HISTORIĘ →
+            POZNAJ NASZĄ HISTORIĘ
           </a>
         </div>
       </div>

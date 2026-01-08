@@ -58,25 +58,19 @@ const strapiUrl = import.meta.env.STRAPI_URL || "";
     <div class="mb-12 flex flex-col md:flex-row justify-between items-end">
       <div>
         <h2
-          class="text-3xl md:text-4xl font-display text-primary dark:text-white mb-4"
+          class="text-4xl md:text-5xl font-accent text-primary dark:text-white mb-6 uppercase tracking-widest leading-tight"
         >
           Nasza przestrzeń
         </h2>
-        <p class="text-gray-600 dark:text-gray-400 font-light max-w-md">
+        <p class="text-gray-400 dark:text-gray-500 font-light max-w-md text-lg">
           Rzut oka na naszą spokojną przestrzeń, wyposażoną w klasyczny sprzęt.
         </p>
       </div>
-      <div class="hidden md:block">
-        <a
-          class="text-primary dark:text-white text-sm uppercase tracking-widest border-b border-primary dark:border-white pb-1 hover:opacity-70 transition-opacity"
-          href="#">Zobacz wszystkie zdjęcia</a
-        >
-      </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto">
       <div
-        class="md:col-span-2 md:row-span-2 relative group overflow-hidden cursor-pointer min-h-[400px]"
+        class="md:col-span-2 md:row-span-2 relative group overflow-hidden cursor-pointer min-h-[400px] shadow-sm"
       >
         <Image
           src={images[0].image.url.startsWith("http")
@@ -85,17 +79,17 @@ const strapiUrl = import.meta.env.STRAPI_URL || "";
           alt={images[0].image.alternativeText}
           width={800}
           height={800}
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
         />
         <div
-          class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+          class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
         </div>
       </div>
 
       {
         images.slice(1, 4).map((item) => (
-          <div class="relative group overflow-hidden cursor-pointer min-h-[200px]">
+          <div class="relative group overflow-hidden cursor-pointer min-h-[250px] shadow-sm">
             <Image
               src={
                 item.image.url.startsWith("http")
@@ -105,28 +99,33 @@ const strapiUrl = import.meta.env.STRAPI_URL || "";
               alt={item.image.alternativeText}
               width={400}
               height={400}
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
+            <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
         ))
       }
 
       <div
-        class="relative group overflow-hidden cursor-pointer min-h-[200px] bg-primary flex items-center justify-center"
+        class="relative group overflow-hidden cursor-pointer min-h-[250px] bg-primary flex items-center justify-center p-8 text-center shadow-sm"
       >
-        <div class="text-center p-6">
-          <span class="material-icons-outlined text-white text-4xl mb-2"
-            >calendar_today</span
+        <div class="space-y-6">
+          <span class="material-icons-outlined text-white text-5xl opacity-40"
+            >chat_bubble_outline</span
           >
-          <h3 class="text-white font-display text-xl mb-2">Umów wizytę</h3>
-          <p class="text-white/80 text-xs font-light mb-4">
-            Zobacz studio na żywo.
+          <h3 class="text-white font-accent text-2xl uppercase tracking-widest">
+            Zapraszamy
+          </h3>
+          <p class="text-blue-50/80 text-sm font-light leading-relaxed">
+            Chcesz zobaczyć studio na żywo lub dopytać o szczegóły?
           </p>
-          <button
-            class="bg-white text-primary px-4 py-2 text-xs uppercase tracking-widest hover:bg-opacity-90"
-            >Terminarz</button
-          >
+          <div class="pt-4">
+            <a
+              href="/kontakt/"
+              class="inline-block bg-white text-primary px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-blue-50 transition-colors"
+              >Skontaktuj się</a
+            >
+          </div>
         </div>
       </div>
     </div>

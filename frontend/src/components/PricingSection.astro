@@ -110,35 +110,37 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
                 {category.description}
               </p>
             </div>
-            <div class="bg-surface-light dark:bg-surface-dark shadow-lg dark:shadow-none dark:border dark:border-gray-700 rounded-xl overflow-hidden flex-1 flex flex-col">
+            <div class="bg-white dark:bg-surface-dark shadow-sm hover:shadow-md transition-all duration-500 rounded-sm overflow-hidden flex-1 flex flex-col border border-gray-100 dark:border-gray-800">
               {category.items.map((item, index) => (
                 <div
-                  class={`p-8 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group relative ${index === category.items.length - 1 ? "border-b-0" : ""}`}
+                  class={`p-8 md:p-10 border-b border-gray-50 dark:border-gray-800 transition-colors group relative ${index === category.items.length - 1 ? "border-b-0" : ""}`}
                 >
                   {item.popular && (
-                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-lg">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] uppercase font-bold px-4 py-2">
                       Popularne
                     </div>
                   )}
-                  <div class="flex justify-between items-baseline mb-2">
-                    <h3 class="text-xl font-medium text-gray-800 dark:text-white">
+                  <div class="flex justify-between items-baseline mb-4">
+                    <h3 class="text-xl font-accent text-primary dark:text-white uppercase tracking-wider">
                       {item.name}
                     </h3>
                     <div class="text-right">
-                      <span class="text-2xl font-accent font-semibold text-primary dark:text-white">
+                      <span class="text-2xl font-accent font-bold text-primary dark:text-white">
                         {item.price}
                       </span>
                     </div>
                   </div>
-                  <p class="text-xs text-gray-400 mb-4 font-light leading-relaxed">
+                  <p class="text-xs text-gray-400 dark:text-gray-500 mb-8 font-light leading-relaxed">
                     {item.description}
                   </p>
-                  <a
-                    href="/kontakt/"
-                    class="text-primary dark:text-blue-300 text-xs font-semibold uppercase tracking-widest group-hover:underline decoration-1 underline-offset-4"
-                  >
-                    {item.linkText}
-                  </a>
+                  <div class="mt-auto">
+                    <a
+                      href="/kontakt/"
+                      class="text-primary dark:text-blue-300 text-[10px] font-bold uppercase tracking-[0.2em] border-b border-transparent group-hover:border-primary transition-all pb-1"
+                    >
+                      {item.linkText}
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>

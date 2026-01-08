@@ -1,59 +1,107 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import { Image } from 'astro:assets';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
 
 const event = {
     title: "Oddech i Ruch: Pilates Retreat",
     date: "10-14 Sierpnia 2024",
     location: "Mazury, Polska",
     price: "od 1600 PLN",
-    heroImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1920&auto=format&fit=crop",
-    mainContent: "Długi weekend w sercu Natury. Codzienne sesje pilatesu, zdrowe jedzenie, warsztaty oddechowe. Czas na regenerację w kameralnej grupie. Zapraszamy Cię na wyjątkowy wyjazd, podczas którego skupimy się na połączeniu ruchu z oddechem w malowniczym otoczeniu Mazur.",
+    heroImage:
+        "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1920&auto=format&fit=crop",
+    mainContent:
+        "Długi weekend w sercu Natury. Codzienne sesje pilatesu, zdrowe jedzenie, warsztaty oddechowe. Czas na regenerację w kameralnej grupie. Zapraszamy Cię na wyjątkowy wyjazd, podczas którego skupimy się na połączeniu ruchu z oddechem w malowniczym otoczeniu Mazur.",
     features: [
         "Codzienne sesje Pilatesu na macie i z akcesoriami",
         "Warsztaty oddechowe (Pranayama i techniki relaksacyjne)",
         "Pełne wyżywienie w duchu 'Slow Food'",
         "Noclegi w butikowym pensjonacie blisko jeziora",
         "Czas wolny na saunę, kąpiele w jeziorze i spacery po lesie",
-        "Możliwość konsultacji indywidualnych"
+        "Możliwość konsultacji indywidualnych",
     ],
     schedule: [
-        { day: "Dzień 1", items: ["Przyjazd i zakwaterowanie", "Sesja otwierająca 'Uważny Ruch'", "Wspólna powitalna kolacja"] },
-        { day: "Dzień 2-4", items: ["Poranny pilates na trawie", "Śniadanie", "Czas wolny / Warsztaty tematyczne", "Popołudniowa sesja regeneracyjna", "Kolacja"] },
-        { day: "Dzień 5", items: ["Poranne pożegnanie z matą", "Ostatnie wspólne śniadanie", "Wykwaterowanie"] }
-    ]
+        {
+            day: "Dzień 1",
+            items: [
+                "Przyjazd i zakwaterowanie",
+                "Sesja otwierająca 'Uważny Ruch'",
+                "Wspólna powitalna kolacja",
+            ],
+        },
+        {
+            day: "Dzień 2-4",
+            items: [
+                "Poranny pilates na trawie",
+                "Śniadanie",
+                "Czas wolny / Warsztaty tematyczne",
+                "Popołudniowa sesja regeneracyjna",
+                "Kolacja",
+            ],
+        },
+        {
+            day: "Dzień 5",
+            items: [
+                "Poranne pożegnanie z matą",
+                "Ostatnie wspólne śniadanie",
+                "Wykwaterowanie",
+            ],
+        },
+    ],
 };
 ---
 
-<Layout title={`${event.title} - Pilateka Wyjazdy`} description={`Dołącz do nas na ${event.title} w ${event.location}. Wyjątkowy czas z pilatesem blisko natury.`}>
+<Layout
+    title={`${event.title} - Pilateka Wyjazdy`}
+    description={`Dołącz do nas na ${event.title} w ${event.location}. Wyjątkowy czas z pilatesem blisko natury.`}
+>
     <Navigation />
-    
+
     <main>
         {/* Simple Hero */}
-        <div class="relative h-[60vh] flex items-end bg-background-dark overflow-hidden">
+        <div
+            class="relative h-[60vh] flex items-end bg-background-dark overflow-hidden"
+        >
             <div class="absolute inset-0">
-                <Image 
-                    src={event.heroImage} 
+                <Image
+                    src={event.heroImage}
                     alt={event.title}
                     width={1920}
                     height={1080}
                     class="w-full h-full object-cover opacity-60"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"
+                >
+                </div>
             </div>
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full"
+            >
                 <div class="max-w-3xl">
-                    <span class="text-xs uppercase tracking-[0.4em] text-white/70 mb-4 block">Wyjazd / Mazury</span>
-                    <h1 class="text-4xl md:text-6xl font-accent text-white mb-6 uppercase tracking-wider">{event.title}</h1>
-                    <div class="flex flex-wrap gap-8 text-white/80 text-sm font-light tracking-widest uppercase">
+                    <span
+                        class="text-xs uppercase tracking-[0.4em] text-white/70 mb-4 block"
+                        >Wyjazd / Mazury</span
+                    >
+                    <h1
+                        class="text-4xl md:text-6xl font-accent text-white mb-6 uppercase tracking-wider"
+                    >
+                        {event.title}
+                    </h1>
+                    <div
+                        class="flex flex-wrap gap-8 text-white/80 text-sm font-light tracking-widest uppercase"
+                    >
                         <div class="flex items-center">
-                            <span class="material-icons-outlined text-sm mr-3">calendar_today</span>
+                            <span class="material-icons-outlined text-sm mr-3"
+                                >calendar_today</span
+                            >
                             {event.date}
                         </div>
                         <div class="flex items-center">
-                            <span class="material-icons-outlined text-sm mr-3">place</span>
+                            <span class="material-icons-outlined text-sm mr-3"
+                                >place</span
+                            >
                             {event.location}
                         </div>
                     </div>
@@ -62,79 +110,152 @@ const event = {
         </div>
 
         {/* Content Section */}
-        <section class="py-24 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
+        <section
+            class="py-24 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800"
+        >
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
                     <div class="lg:col-span-2 space-y-12">
-                        <div class="prose prose-xl dark:prose-invert max-w-none">
-                            <p class="font-light leading-relaxed text-gray-600 dark:text-gray-300 italic">
+                        <div
+                            class="prose prose-xl dark:prose-invert max-w-none"
+                        >
+                            <p
+                                class="font-light leading-relaxed text-gray-600 dark:text-gray-300"
+                            >
                                 {event.mainContent}
                             </p>
                         </div>
-                        
+
                         <div class="space-y-8">
-                            <h2 class="text-2xl font-accent text-primary dark:text-white uppercase tracking-widest italic">W programie:</h2>
-                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                                {event.features.map(feature => (
-                                    <li class="flex items-start space-x-4 group">
-                                        <span class="material-icons-outlined text-primary/40 group-hover:text-primary transition-colors">check_circle_outline</span>
-                                        <span class="text-gray-600 dark:text-gray-400 font-light">{feature}</span>
-                                    </li>
-                                ))}
+                            <h2
+                                class="text-2xl font-accent text-primary dark:text-white uppercase tracking-widest"
+                            >
+                                W programie:
+                            </h2>
+                            <ul
+                                class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4"
+                            >
+                                {
+                                    event.features.map((feature) => (
+                                        <li class="flex items-start space-x-4 group">
+                                            <span class="material-icons-outlined text-primary/40 group-hover:text-primary transition-colors">
+                                                check_circle_outline
+                                            </span>
+                                            <span class="text-gray-600 dark:text-gray-400 font-light">
+                                                {feature}
+                                            </span>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                         </div>
 
-                        <div class="space-y-8 pt-8 border-t border-gray-100 dark:border-gray-800">
-                            <h2 class="text-2xl font-accent text-primary dark:text-white uppercase tracking-widest italic">Harmonogram:</h2>
+                        <div
+                            class="space-y-8 pt-8 border-t border-gray-100 dark:border-gray-800"
+                        >
+                            <h2
+                                class="text-2xl font-accent text-primary dark:text-white uppercase tracking-widest"
+                            >
+                                Harmonogram:
+                            </h2>
                             <div class="space-y-6">
-                                {event.schedule.map(day => (
-                                    <div class="border-l-2 border-primary/10 pl-8 relative">
-                                        <div class="absolute -left-[5px] top-0 w-2 h-2 bg-primary rounded-full"></div>
-                                        <h3 class="font-accent text-lg text-primary dark:text-white mb-3 uppercase tracking-widest italic">{day.day}</h3>
-                                        <ul class="space-y-2">
-                                            {day.items.map(item => (
-                                                <li class="text-gray-500 dark:text-gray-400 font-light text-sm">{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
+                                {
+                                    event.schedule.map((day) => (
+                                        <div class="border-l-2 border-primary/10 pl-8 relative">
+                                            <div class="absolute -left-[5px] top-0 w-2 h-2 bg-primary rounded-full" />
+                                            <h3 class="font-accent text-lg text-primary dark:text-white mb-3 uppercase tracking-widest">
+                                                {day.day}
+                                            </h3>
+                                            <ul class="space-y-2">
+                                                {day.items.map((item) => (
+                                                    <li class="text-gray-500 dark:text-gray-400 font-light text-sm">
+                                                        {item}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
 
                     {/* Booking Card */}
                     <div class="lg:sticky lg:top-32 space-y-8">
-                        <div class="bg-surface-light dark:bg-surface-dark p-10 shadow-2xl border border-gray-100 dark:border-gray-800 rounded-sm">
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-10 shadow-2xl border border-gray-100 dark:border-gray-800 rounded-sm"
+                        >
                             <div class="mb-8">
-                                <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">Cena inwestycji</span>
-                                <p class="text-3xl font-accent text-primary dark:text-white">{event.price}</p>
+                                <span
+                                    class="text-xs text-gray-400 uppercase tracking-widest block mb-1"
+                                    >Cena inwestycji</span
+                                >
+                                <p
+                                    class="text-3xl font-accent text-primary dark:text-white"
+                                >
+                                    {event.price}
+                                </p>
                             </div>
                             <div class="space-y-4 mb-10">
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-gray-500 font-light">Liczba miejsc</span>
-                                    <span class="text-primary font-medium uppercase">Kameralnie (8-10 osób)</span>
+                                <div
+                                    class="flex justify-between items-center text-sm"
+                                >
+                                    <span class="text-gray-500 font-light"
+                                        >Liczba miejsc</span
+                                    >
+                                    <span
+                                        class="text-primary font-medium uppercase"
+                                        >Kameralnie (8-10 osób)</span
+                                    >
                                 </div>
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-gray-500 font-light">Status</span>
-                                    <span class="text-secondary font-medium uppercase">Lista oczekujących</span>
+                                <div
+                                    class="flex justify-between items-center text-sm"
+                                >
+                                    <span class="text-gray-500 font-light"
+                                        >Status</span
+                                    >
+                                    <span
+                                        class="text-secondary font-medium uppercase"
+                                        >Lista oczekujących</span
+                                    >
                                 </div>
                             </div>
-                            <a href="/kontakt" class="block w-full bg-primary hover:bg-primary-light text-white text-center py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300">
+                            <a
+                                href="/kontakt"
+                                class="block w-full bg-primary hover:bg-primary-light text-white text-center py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300"
+                            >
                                 Zapytaj o miejsce
                             </a>
-                            <p class="mt-6 text-[10px] text-center text-gray-400 uppercase tracking-widest">Wymagana bezzwrotna zaliczka przy rezerwacji.</p>
+                            <p
+                                class="mt-6 text-[10px] text-center text-gray-400 uppercase tracking-widest"
+                            >
+                                Wymagana bezzwrotna zaliczka przy rezerwacji.
+                            </p>
                         </div>
-                        
+
                         <div class="p-8 border-2 border-primary/5 rounded-sm">
-                            <h4 class="font-accent text-primary dark:text-white mb-4 uppercase tracking-widest text-sm italic">Masz pytania?</h4>
-                            <p class="text-xs text-gray-500 leading-relaxed mb-6 font-light">Chętnie odpowiemy na wszystkie Twoje wątpliwości dotyczące wyjazdu, programu lub zakwaterowania.</p>
-                            <a href="mailto:studio@pilateka.pl" class="text-xs text-primary font-bold uppercase border-b border-primary/20 hover:border-primary transition-all pb-1">Napisz do nas</a>
+                            <h4
+                                class="font-accent text-primary dark:text-white mb-4 uppercase tracking-widest text-sm"
+                            >
+                                Masz pytania?
+                            </h4>
+                            <p
+                                class="text-xs text-gray-500 leading-relaxed mb-6 font-light"
+                            >
+                                Chętnie odpowiemy na wszystkie Twoje wątpliwości
+                                dotyczące wyjazdu, programu lub zakwaterowania.
+                            </p>
+                            <a
+                                href="mailto:studio@pilateka.pl"
+                                class="text-xs text-primary font-bold uppercase border-b border-primary/20 hover:border-primary transition-all pb-1"
+                                >Napisz do nas</a
+                            >
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <Footer />
 </Layout>

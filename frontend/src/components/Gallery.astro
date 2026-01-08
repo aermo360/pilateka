@@ -67,7 +67,7 @@ const strapiUrl = import.meta.env.STRAPI_URL || "";
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {
         items.map((item) => (
-          <div class="group relative aspect-[3/4] cursor-pointer overflow-hidden bg-gray-100 shadow-sm">
+          <div class="group relative aspect-[3/2] sm:aspect-[4/5] md:aspect-[3/4] cursor-pointer overflow-hidden bg-gray-100 shadow-sm">
             <Image
               src={
                 item.image.url.startsWith("http")
@@ -93,8 +93,8 @@ const strapiUrl = import.meta.env.STRAPI_URL || "";
             </div>
 
             {/* Hover description overlay */}
-            <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center p-8 text-center">
-              <h4 class="text-xl md:text-2xl font-accent text-white mb-6 uppercase tracking-widest italic border-b border-white/20 pb-4">
+            <div class="absolute inset-0 bg-primary/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center p-8 text-center ring-1 ring-white/10 ring-inset">
+              <h4 class="text-xl md:text-2xl font-accent text-white mb-6 uppercase tracking-widest border-b border-white/20 pb-4">
                 {item.label}
               </h4>
               <p class="text-blue-50 text-sm md:text-base font-light leading-relaxed">
