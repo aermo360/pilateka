@@ -193,3 +193,195 @@ Create your first administrator 💻 by going to the administration panel at:
 [2026-01-08 01:31:37.756] [32mhttp[39m: GET /api/philosophy?populate=* (7 ms) 404
 [2026-01-08 01:31:37.758] [32mhttp[39m: GET /api/quote (7 ms) 404
 [2026-01-08 01:31:37.759] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 01:31:50.932] [32mhttp[39m: GET /api/contact-hero (2 ms) 404
+[2026-01-08 01:31:50.933] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:31:50.934] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:50.942] [32mhttp[39m: GET /api/contact-hero (6 ms) 404
+[2026-01-08 01:31:50.942] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:31:50.942] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 01:31:52.078] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:52.436] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:53.339] [32mhttp[39m: GET /api/pricing-hero (3 ms) 404
+[2026-01-08 01:31:53.339] [32mhttp[39m: GET /api/pricing-categories?populate=items (2 ms) 404
+[2026-01-08 01:31:53.339] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:53.383] [32mhttp[39m: GET /api/pricing-hero (4 ms) 404
+[2026-01-08 01:31:53.383] [32mhttp[39m: GET /api/pricing-categories?populate=items (3 ms) 404
+[2026-01-08 01:31:53.383] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:53.790] [32mhttp[39m: GET /api/about-hero (2 ms) 404
+[2026-01-08 01:31:53.790] [32mhttp[39m: GET /api/about-bio?populate=* (1 ms) 404
+[2026-01-08 01:31:53.790] [32mhttp[39m: GET /api/about-experience-items (1 ms) 404
+[2026-01-08 01:31:53.791] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:53.793] [32mhttp[39m: GET /api/about-hero (1 ms) 404
+[2026-01-08 01:31:53.794] [32mhttp[39m: GET /api/about-bio?populate=* (1 ms) 404
+[2026-01-08 01:31:53.798] [32mhttp[39m: GET /api/about-experience-items (2 ms) 404
+[2026-01-08 01:31:53.798] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:54.618] [32mhttp[39m: GET /api/studio-hero?populate=* (4 ms) 404
+[2026-01-08 01:31:54.618] [32mhttp[39m: GET /api/studio-methods (2 ms) 404
+[2026-01-08 01:31:54.618] [32mhttp[39m: GET /api/studio-intro?populate=* (3 ms) 404
+[2026-01-08 01:31:54.618] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:31:54.618] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:54.753] [32mhttp[39m: GET /api/studio-hero?populate=* (4 ms) 404
+[2026-01-08 01:31:54.753] [32mhttp[39m: GET /api/studio-intro?populate=* (3 ms) 404
+[2026-01-08 01:31:54.753] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:31:54.753] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:31:54.753] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:31:55.678] [32mhttp[39m: GET /api/hero-section?populate=* (6 ms) 404
+[2026-01-08 01:31:55.678] [32mhttp[39m: GET /api/philosophy?populate=* (5 ms) 404
+[2026-01-08 01:31:55.678] [32mhttp[39m: GET /api/gallery-items?populate=* (3 ms) 404
+[2026-01-08 01:31:55.679] [32mhttp[39m: GET /api/quote (3 ms) 404
+[2026-01-08 01:31:55.679] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:31:55.888] [32mhttp[39m: GET /api/gallery-items?populate=* (3 ms) 404
+[2026-01-08 01:31:55.888] [32mhttp[39m: GET /api/quote (2 ms) 404
+[2026-01-08 01:31:55.889] [32mhttp[39m: GET /api/hero-section?populate=* (6 ms) 404
+[2026-01-08 01:31:55.889] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:31:55.889] [32mhttp[39m: GET /api/philosophy?populate=* (5 ms) 404
+[2026-01-08 01:31:56.398] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:31:56.399] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:31:56.399] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:31:56.399] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:31:56.399] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-08 01:40:44.068] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (4ms)
+[2026-01-08 01:40:45.119] [32minfo[39m: Shutting down Strapi
+[2026-01-08 01:40:45.121] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-08 01:40:47.939] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:47469) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (178ms)
+- Creating admin
+✔ Creating admin (491ms)
+✔ Loading Strapi (1710ms)
+- Generating types
+✔ Generating types (84ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (3ms)
+✔ Compiling TS (937ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Thu Jan 08 2026 01:40:49 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 2743 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 47469                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-08 01:40:49.690] [32minfo[39m: Strapi started successfully
+[2026-01-08 01:40:49.830] [32mhttp[39m: GET /admin (31 ms) 200
+[2026-01-08 01:40:50.324] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 01:40:50.445] [32mhttp[39m: GET /admin/init (2 ms) 200
+1:41:19 AM [vite] page reload .strapi/client/app.js
+[2026-01-08 01:41:19.769] [32mhttp[39m: GET /admin/auth/register-admin (3 ms) 200
+[2026-01-08 01:41:20.001] [32mhttp[39m: GET /admin/project-type (1 ms) 200
+[2026-01-08 01:41:20.397] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 01:41:45.242] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:41:45.245] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:41:45.257] [32mhttp[39m: GET /api/studio-methods (13 ms) 404
+[2026-01-08 01:41:45.262] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (11 ms) 404
+[2026-01-08 01:41:45.262] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:42:21.240] [32mhttp[39m: GET /api/studio-hero?populate=* (4 ms) 404
+[2026-01-08 01:42:21.240] [32mhttp[39m: GET /api/studio-intro?populate=* (2 ms) 404
+[2026-01-08 01:42:21.247] [32mhttp[39m: GET /api/studio-methods (8 ms) 404
+[2026-01-08 01:42:21.253] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (12 ms) 404
+[2026-01-08 01:42:21.259] [32mhttp[39m: GET /api/contact (8 ms) 404
+[2026-01-08 01:43:08.107] [32mhttp[39m: GET /api/studio-hero?populate=* (2 ms) 404
+[2026-01-08 01:43:08.110] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:43:08.111] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:43:08.112] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:43:08.121] [32mhttp[39m: GET /api/contact (9 ms) 404
+[2026-01-08 01:44:10.350] [32mhttp[39m: GET /api/studio-hero?populate=* (6 ms) 404
+[2026-01-08 01:44:10.351] [32mhttp[39m: GET /api/studio-intro?populate=* (6 ms) 404
+[2026-01-08 01:44:10.354] [32mhttp[39m: GET /api/studio-methods (6 ms) 404
+[2026-01-08 01:44:10.364] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (12 ms) 404
+[2026-01-08 01:44:10.364] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 01:45:18.824] [32mhttp[39m: GET /api/studio-hero?populate=* (3 ms) 404
+[2026-01-08 01:45:18.827] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:45:18.828] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:45:18.831] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:45:18.835] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 01:45:30.225] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:45:30.225] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:45:30.227] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:45:30.237] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (10 ms) 404
+[2026-01-08 01:45:30.240] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 01:45:42.032] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:45:42.043] [32mhttp[39m: GET /api/studio-intro?populate=* (14 ms) 404
+[2026-01-08 01:45:42.044] [32mhttp[39m: GET /api/studio-methods (14 ms) 404
+[2026-01-08 01:45:42.062] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (8 ms) 404
+[2026-01-08 01:45:42.066] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-08 01:46:01.097] [32mhttp[39m: GET /api/studio-hero?populate=* (3 ms) 404
+[2026-01-08 01:46:01.097] [32mhttp[39m: GET /api/studio-intro?populate=* (1 ms) 404
+[2026-01-08 01:46:01.103] [32mhttp[39m: GET /api/studio-methods (5 ms) 404
+[2026-01-08 01:46:01.105] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (5 ms) 404
+[2026-01-08 01:46:01.108] [32mhttp[39m: GET /api/contact (7 ms) 404
+[2026-01-08 01:46:06.265] [32mhttp[39m: GET /api/studio-hero?populate=* (3 ms) 404
+[2026-01-08 01:46:06.266] [32mhttp[39m: GET /api/studio-intro?populate=* (2 ms) 404
+[2026-01-08 01:46:06.268] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:46:06.274] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (7 ms) 404
+[2026-01-08 01:46:06.275] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 01:46:10.089] [32mhttp[39m: GET /api/studio-hero?populate=* (2 ms) 404
+[2026-01-08 01:46:10.092] [32mhttp[39m: GET /api/studio-intro?populate=* (3 ms) 404
+[2026-01-08 01:46:10.093] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:46:10.097] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:46:10.100] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 01:46:12.381] [32mhttp[39m: GET /api/studio-hero?populate=* (5 ms) 404
+[2026-01-08 01:46:12.381] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:46:12.382] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (3 ms) 404
+[2026-01-08 01:46:12.382] [32mhttp[39m: GET /api/studio-methods (4 ms) 404
+[2026-01-08 01:46:12.382] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:46:25.728] [32mhttp[39m: GET /api/studio-hero?populate=* (4 ms) 404
+[2026-01-08 01:46:25.732] [32mhttp[39m: GET /api/studio-intro?populate=* (6 ms) 404
+[2026-01-08 01:46:25.738] [32mhttp[39m: GET /api/studio-methods (10 ms) 404
+[2026-01-08 01:46:25.740] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (10 ms) 404
+[2026-01-08 01:46:25.741] [32mhttp[39m: GET /api/contact (10 ms) 404
+[2026-01-08 01:46:33.373] [32mhttp[39m: GET /api/studio-hero?populate=* (22 ms) 404
+[2026-01-08 01:46:33.378] [32mhttp[39m: GET /api/studio-intro?populate=* (21 ms) 404
+[2026-01-08 01:46:33.379] [32mhttp[39m: GET /api/studio-methods (15 ms) 404
+[2026-01-08 01:46:33.382] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (4 ms) 404
+[2026-01-08 01:46:33.382] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-08 01:46:34.004] [32mhttp[39m: GET /api/studio-hero?populate=* (8 ms) 404
+[2026-01-08 01:46:34.004] [32mhttp[39m: GET /api/studio-intro?populate=* (7 ms) 404
+[2026-01-08 01:46:34.004] [32mhttp[39m: GET /api/studio-methods (6 ms) 404
+[2026-01-08 01:46:34.005] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (5 ms) 404
+[2026-01-08 01:46:34.005] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 01:46:43.602] [32mhttp[39m: GET /api/studio-hero?populate=* (2 ms) 404
+[2026-01-08 01:46:43.605] [32mhttp[39m: GET /api/studio-intro?populate=* (3 ms) 404
+[2026-01-08 01:46:43.606] [32mhttp[39m: GET /api/studio-methods (2 ms) 404
+[2026-01-08 01:46:43.612] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-08 01:46:43.614] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (8 ms) 404
+[2026-01-08 01:46:56.644] [32mhttp[39m: GET /api/studio-hero?populate=* (3 ms) 404
+[2026-01-08 01:46:56.649] [32mhttp[39m: GET /api/studio-intro?populate=* (4 ms) 404
+[2026-01-08 01:46:56.654] [32mhttp[39m: GET /api/studio-methods (7 ms) 404
+[2026-01-08 01:46:56.659] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (7 ms) 404
+[2026-01-08 01:46:56.659] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 01:46:57.949] [32mhttp[39m: GET /api/studio-hero?populate=* (8 ms) 404
+[2026-01-08 01:46:57.949] [32mhttp[39m: GET /api/studio-intro?populate=* (6 ms) 404
+[2026-01-08 01:46:57.949] [32mhttp[39m: GET /api/studio-gallery-items?populate=* (2 ms) 404
+[2026-01-08 01:46:57.949] [32mhttp[39m: GET /api/studio-methods (3 ms) 404
+[2026-01-08 01:46:57.950] [32mhttp[39m: GET /api/contact (2 ms) 404
