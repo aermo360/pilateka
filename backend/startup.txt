@@ -762,3 +762,9 @@ Create your first administrator 💻 by going to the administration panel at:
 [2026-01-08 02:05:00.137] [32mhttp[39m: GET /api/contact (2 ms) 404
 [2026-01-08 02:05:00.138] [32mhttp[39m: GET /api/contact-hero (3 ms) 404
 [2026-01-08 02:05:00.138] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 02:08:05.097] [32mhttp[39m: GET /admin/auth/register-admin (6 ms) 200
+[2026-01-08 02:08:05.497] [32mhttp[39m: GET /admin/project-type (10 ms) 200
+[2026-01-08 02:08:05.578] [32mhttp[39m: GET /admin/init (3 ms) 200
+[2026-01-08 02:08:14.667] [32mhttp[39m: GET /api/contact-hero (8 ms) 404
+[2026-01-08 02:08:14.681] [32mhttp[39m: GET /api/contact (15 ms) 404
+[2026-01-08 02:08:14.683] [32mhttp[39m: GET /api/contact (5 ms) 404
