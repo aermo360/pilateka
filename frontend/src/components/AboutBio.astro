@@ -24,10 +24,10 @@ try {
 
 if (!data) {
     data = {
-        storyTitle: "Moja Historia",
+        storyTitle: "O mnie",
         storyContent:
-            "Pilates poznałam w 2018 roku, i zafascynowała mnie ona od pierwszego zajęcia. Dwa lata później rozpoczęłam edukację nauczycielską. Po kilkunastu ukończonych szkoleniach i kilku tysiącach godzin poprowadzonych zajęć - postanowiłam stworzyć miejsce, w którym będę mogła dzielić się z Wami moją pasją do metody uczyć mądrego ruchu i pomagać w budowaniu sprawności.",
-        quote: "Wierzę, że siła fizyczna buduje odporność psychiczną. W Pilatece budujesz obie.",
+            "Cześć! Mam na imię Kasia i zapraszam Cię do Pilateki – miejsca, w którym mogę się dzielić swoją pasją do genialnej formy ruchu, jaką jest pilates.\n\nSwoją przygodę z pilatesem zaczęłam w 2018 roku, a dwa lata później rozpoczęłam kursy nauczycielskie. Miałam okazję uczyć się od najlepszych master trenerów klasycznego pilatesu w Polsce i za granicą – ukończyłam 3 poziomy Classical Pilates Pioneer Program u Weroniki Ratkowskiej, Reformer i Cadillac Extensive Course u Karoliny Libelt, szkoliłam się również pod okiem Sonje Mayo, Lesley Bell, Victorii Torie-Capan, Carolyne Ergin oraz Elaine Ewing.",
+        quote: "",
         image: {
             url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800",
             alternativeText: "Zdjęcie portret Katarzyny Wiśniewskiej",
@@ -69,75 +69,11 @@ const imageUrl = data.image.url.startsWith("http")
                         {data.storyTitle}
                     </h2>
                     <div
-                        class="prose prose-lg text-gray-500 dark:text-gray-400 font-light leading-relaxed max-w-none"
+                        class="prose prose-lg text-gray-500 dark:text-gray-400 font-light leading-relaxed max-w-none whitespace-pre-line"
                     >
                         <p>{data.storyContent}</p>
                     </div>
                 </div>
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 border-t border-gray-100 dark:border-gray-800"
-                >
-                    <div class="space-y-3">
-                        <div
-                            class="w-12 h-12 bg-primary/5 dark:bg-white/10 flex items-center justify-center rounded-full mb-4"
-                        >
-                            <span
-                                class="material-icons-outlined text-primary dark:text-white text-xl"
-                                >self_improvement</span
-                            >
-                        </div>
-                        <h3
-                            class="font-accent text-lg text-primary dark:text-white uppercase tracking-wider"
-                        >
-                            Świadome Podejście
-                        </h3>
-                        <p
-                            class="text-sm text-gray-400 dark:text-gray-400 font-light leading-relaxed"
-                        >
-                            Skupienie na połączeniu oddechu z ruchem dla
-                            głębszej świadomości ciała.
-                        </p>
-                    </div>
-                    <div class="space-y-3">
-                        <div
-                            class="w-12 h-12 bg-primary/5 dark:bg-white/10 flex items-center justify-center rounded-full mb-4"
-                        >
-                            <span
-                                class="material-icons-outlined text-primary dark:text-white text-xl"
-                                >school</span
-                            >
-                        </div>
-                        <h3
-                            class="font-accent text-lg text-primary dark:text-white uppercase tracking-wider"
-                        >
-                            Ciągły Rozwój
-                        </h3>
-                        <p
-                            class="text-sm text-gray-400 dark:text-gray-400 font-light leading-relaxed"
-                        >
-                            Stale poszerzam wiedzę, aby zapewniać bezpieczne i
-                            skuteczne prowadzenie.
-                        </p>
-                    </div>
-                </div>
-                <blockquote
-                    class="bg-background-light dark:bg-accent-dark p-10 md:p-12 border-l-4 border-primary dark:border-white mt-12 relative"
-                >
-                    <span
-                        class="absolute top-6 left-6 text-6xl text-primary/10 dark:text-white/10 font-display leading-none"
-                        >“</span
-                    >
-                    <p
-                        class="font-accent text-xl text-primary dark:text-white relative z-10 leading-relaxed text-center"
-                    >
-                        {data.quote}
-                    </p>
-                    <footer
-                        class="mt-6 text-[10px] font-bold tracking-[0.3em] uppercase text-primary/60 dark:text-gray-400"
-                    >
-                        KATARZYNA WIŚNIEWSKA
-                    </footer>
-                </blockquote>
             </div>
         </div>
     </div>

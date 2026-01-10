@@ -1252,3 +1252,322 @@ Create your first administrator 💻 by going to the administration panel at:
 [2026-01-08 11:15:14.841] [32mhttp[39m: GET /api/contact-hero (15 ms) 404
 [2026-01-08 11:15:14.842] [32mhttp[39m: GET /api/contact (11 ms) 404
 [2026-01-08 11:15:14.843] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 12:10:41.772] [32mhttp[39m: GET /api/contact-hero (39 ms) 404
+[2026-01-08 12:10:41.778] [32mhttp[39m: GET /api/contact (12 ms) 404
+[2026-01-08 12:10:41.779] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 12:45:37.084] [32mhttp[39m: GET /api/contact (33 ms) 404
+[2026-01-08 12:45:37.086] [32mhttp[39m: GET /api/contact (9 ms) 404
+[2026-01-08 12:45:37.166] [32mhttp[39m: GET /api/contact-hero (123 ms) 404
+[2026-01-08 13:24:34.256] [32mhttp[39m: GET /api/contact-hero (32 ms) 404
+[2026-01-08 13:24:34.260] [32mhttp[39m: GET /api/contact (15 ms) 404
+[2026-01-08 13:24:34.261] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 14:17:38.142] [32mhttp[39m: GET /api/contact-hero (39 ms) 404
+[2026-01-08 14:17:38.143] [32mhttp[39m: GET /api/contact (20 ms) 404
+[2026-01-08 14:17:38.143] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 15:38:44.348] [32mhttp[39m: GET /api/contact-hero (45 ms) 404
+[2026-01-08 15:38:44.349] [32mhttp[39m: GET /api/contact (38 ms) 404
+[2026-01-08 15:38:44.349] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-08 17:00:57.186] [32mhttp[39m: GET /admin/auth/register-admin (9 ms) 200
+[2026-01-08 17:00:57.539] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-08 17:00:57.617] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-08 20:40:45.845] [32mhttp[39m: GET /api/contact-hero (8 ms) 404
+[2026-01-08 20:40:45.846] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-08 20:40:45.847] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-09 00:28:17.164] [32mhttp[39m: GET /api/contact-hero (64 ms) 404
+[2026-01-09 00:28:17.167] [32mhttp[39m: GET /api/contact (38 ms) 404
+[2026-01-09 00:28:17.170] [32mhttp[39m: GET /api/contact (32 ms) 404
+[2026-01-09 04:53:43.957] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (163ms)
+[2026-01-09 04:53:52.473] [32minfo[39m: Shutting down Strapi
+[2026-01-09 04:53:52.503] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-09 04:54:08.160] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:12437) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (501ms)
+- Creating admin
+✔ Creating admin (1834ms)
+✔ Loading Strapi (7362ms)
+- Generating types
+✔ Generating types (679ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (18ms)
+✔ Compiling TS (8445ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Fri Jan 09 2026 04:54:19 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 16503 ms                                         [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 12437                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-09 04:54:20.074] [32minfo[39m: Strapi started successfully
+[2026-01-09 04:54:21.069] [32mhttp[39m: GET /admin (390 ms) 200
+[2026-01-09 04:54:23.327] [32mhttp[39m: GET /admin/project-type (6 ms) 200
+[2026-01-09 04:54:23.813] [32mhttp[39m: GET /admin/init (6 ms) 200
+4:58:27 AM [vite] page reload .strapi/client/app.js
+[2026-01-09 04:58:28.305] [32mhttp[39m: GET /admin/auth/register-admin (181 ms) 200
+[2026-01-09 04:58:30.321] [32mhttp[39m: GET /admin/project-type (6 ms) 200
+[2026-01-09 04:58:30.478] [32mhttp[39m: GET /favicon.ico (13 ms) 200
+[2026-01-09 04:58:30.752] [32mhttp[39m: GET /admin/init (40 ms) 200
+4:58:33 AM [vite] page reload .strapi/client/index.html
+[2026-01-09 04:58:33.802] [32mhttp[39m: GET /admin/auth/register-admin (8 ms) 200
+[2026-01-09 04:58:35.301] [32mhttp[39m: GET /admin/project-type (54 ms) 200
+[2026-01-09 04:58:35.573] [32mhttp[39m: GET /admin/init (15 ms) 200
+[2026-01-09 05:00:35.947] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (25ms)
+[2026-01-09 05:00:41.169] [32minfo[39m: Shutting down Strapi
+[2026-01-09 05:00:41.185] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-09 05:00:52.405] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:12808) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (244ms)
+- Creating admin
+✔ Creating admin (940ms)
+✔ Loading Strapi (4910ms)
+- Generating types
+✔ Generating types (407ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (66ms)
+✔ Compiling TS (7511ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Fri Jan 09 2026 05:01:01 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 12867 ms                                         [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 12808                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-09 05:01:01.758] [32minfo[39m: Strapi started successfully
+[2026-01-09 05:01:02.323] [32mhttp[39m: GET /admin (249 ms) 200
+[2026-01-09 05:01:04.776] [32mhttp[39m: GET /admin/project-type (42 ms) 200
+[2026-01-09 05:01:05.661] [32mhttp[39m: GET /admin/init (21 ms) 200
+5:03:14 AM [vite] page reload .strapi/client/app.js
+[2026-01-09 05:03:14.676] [32mhttp[39m: GET /admin/auth/register-admin (62 ms) 200
+[2026-01-09 05:03:17.076] [32mhttp[39m: GET /admin/project-type (68 ms) 200
+[2026-01-09 05:03:17.378] [32mhttp[39m: GET /admin/init (54 ms) 200
+5:03:17 AM [vite] page reload .strapi/client/index.html
+[2026-01-09 05:03:17.857] [32mhttp[39m: GET /admin/auth/register-admin (28 ms) 200
+[2026-01-09 05:03:19.021] [32mhttp[39m: GET /admin/project-type (3 ms) 200
+[2026-01-09 05:03:19.313] [32mhttp[39m: GET /admin/init (23 ms) 200
+[2026-01-09 05:05:04.857] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (38ms)
+[2026-01-09 05:05:11.230] [32minfo[39m: Shutting down Strapi
+[2026-01-09 05:05:11.249] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-09 05:05:31.518] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:13134) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (644ms)
+- Creating admin
+✔ Creating admin (1288ms)
+✔ Loading Strapi (6716ms)
+- Generating types
+✔ Generating types (601ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (170ms)
+✔ Compiling TS (7943ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Fri Jan 09 2026 05:05:42 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 15297 ms                                         [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 13134                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-09 05:05:42.320] [32minfo[39m: Strapi started successfully
+[2026-01-09 05:05:43.036] [32mhttp[39m: GET /admin (196 ms) 200
+[2026-01-09 05:05:46.168] [32mhttp[39m: GET /admin/project-type (93 ms) 200
+[2026-01-09 05:05:46.732] [32mhttp[39m: GET /admin/init (16 ms) 200
+5:07:27 AM [vite] page reload .strapi/client/app.js
+[2026-01-09 05:07:28.218] [32mhttp[39m: GET /admin/auth/register-admin (53 ms) 200
+5:07:29 AM [vite] page reload .strapi/client/index.html
+[2026-01-09 05:07:30.514] [32mhttp[39m: GET /admin/project-type (8 ms) 200
+[2026-01-09 05:07:30.775] [32mhttp[39m: GET /admin/init (18 ms) 200
+[2026-01-09 05:08:42.579] [32minfo[39m: File changed: /Users/arek/Documents/Pilateka/backend/startup.txt
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (17ms)
+[2026-01-09 05:08:48.649] [32minfo[39m: Shutting down Strapi
+[2026-01-09 05:08:48.667] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2026-01-09 05:08:58.065] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+- Building build context
+
+(node:13382) Warning: Missing transfer.token.salt: Data transfer features have been disabled.
+Please set transfer.token.salt in config/admin.js (ex: you can generate one using Node with `crypto.randomBytes(16).toString('base64')`)
+For security reasons, prefer storing the secret in an environment variable and read it in config/admin.js. See https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#configuration-using-environment-variables.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (444ms)
+- Creating admin
+✔ Creating admin (820ms)
+✔ Loading Strapi (3802ms)
+- Generating types
+✔ Generating types (415ms)
+- Compiling TS
+- Cleaning dist dir /Users/arek/Documents/Pilateka/backend/dist
+✔ Cleaning dist dir (29ms)
+✔ Compiling TS (5235ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Fri Jan 09 2026 05:09:05 GMT+0100 (Central Euro… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 9469 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 13382                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.1 (node v24.12.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m database/data.db                                 [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+One more thing...
+Create your first administrator 💻 by going to the administration panel at:
+
+[90m┌─────────────────────────────┐[39m
+[90m│[39m http://localhost:1337/admin [90m│[39m
+[90m└─────────────────────────────┘[39m
+
+[2026-01-09 05:09:05.239] [32minfo[39m: Strapi started successfully
+[2026-01-09 05:09:06.165] [32mhttp[39m: GET /admin (369 ms) 200
+[2026-01-09 05:09:08.387] [32mhttp[39m: GET /admin/project-type (4 ms) 200
+[2026-01-09 05:09:08.938] [32mhttp[39m: GET /admin/init (21 ms) 200
+5:10:18 AM [vite] page reload .strapi/client/app.js
+[2026-01-09 05:10:18.171] [32mhttp[39m: GET /admin/auth/register-admin (42 ms) 200
+[2026-01-09 05:10:20.542] [32mhttp[39m: GET /admin/project-type (23 ms) 200
+[2026-01-09 05:10:21.137] [32mhttp[39m: GET /admin/init (47 ms) 200
+5:10:21 AM [vite] page reload .strapi/client/index.html
+[2026-01-09 05:10:21.607] [32mhttp[39m: GET /admin/auth/register-admin (90 ms) 200
+[2026-01-09 05:10:23.328] [32mhttp[39m: GET /admin/project-type (10 ms) 200
+[2026-01-09 05:10:23.542] [32mhttp[39m: GET /admin/init (9 ms) 200
+[2026-01-09 08:32:01.079] [32mhttp[39m: GET /api/contact-hero (26 ms) 404
+[2026-01-09 08:32:01.137] [32mhttp[39m: GET /api/contact (63 ms) 404
+[2026-01-09 08:32:01.140] [32mhttp[39m: GET /api/contact (26 ms) 404
+[2026-01-09 14:08:51.808] [32mhttp[39m: GET /api/contact-hero (10 ms) 404
+[2026-01-09 14:08:51.812] [32mhttp[39m: GET /api/contact (6 ms) 404
+[2026-01-09 14:08:51.812] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-09 16:03:35.446] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-09 16:03:35.448] [32mhttp[39m: GET /api/contact (5 ms) 404
+[2026-01-09 16:03:35.449] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-09 19:06:39.499] [32mhttp[39m: GET /admin/auth/register-admin (10 ms) 200
+[2026-01-09 19:06:39.818] [32mhttp[39m: GET /admin/project-type (6 ms) 200
+[2026-01-09 19:06:39.890] [32mhttp[39m: GET /admin/init (5 ms) 200
+[2026-01-09 19:19:21.558] [32mhttp[39m: GET /admin/auth/register-admin (10 ms) 200
+[2026-01-09 19:19:21.874] [32mhttp[39m: GET /admin/project-type (2 ms) 200
+[2026-01-09 19:19:21.988] [32mhttp[39m: GET /admin/init (4 ms) 200
+[2026-01-09 19:31:28.636] [32mhttp[39m: GET /admin/auth/register-admin (11 ms) 200
+[2026-01-09 19:31:29.106] [32mhttp[39m: GET /admin/project-type (10 ms) 200
+[2026-01-09 19:31:29.177] [32mhttp[39m: GET /admin/init (2 ms) 200
+[2026-01-09 19:35:58.704] [32mhttp[39m: GET /admin/auth/register-admin (9 ms) 200
+[2026-01-09 19:35:59.039] [32mhttp[39m: GET /admin/project-type (3 ms) 200
+[2026-01-09 19:35:59.145] [32mhttp[39m: GET /admin/init (4 ms) 200
+[2026-01-09 20:13:57.195] [32mhttp[39m: GET /api/hero-section?populate=* (21 ms) 404
+[2026-01-09 20:13:57.207] [32mhttp[39m: GET /api/philosophy?populate=* (18 ms) 404
+[2026-01-09 20:13:57.209] [32mhttp[39m: GET /api/gallery-items?populate=* (10 ms) 404
+[2026-01-09 20:13:57.209] [32mhttp[39m: GET /api/offers (1 ms) 404
+[2026-01-09 20:13:57.216] [32mhttp[39m: GET /api/quote (6 ms) 404
+[2026-01-09 20:13:57.219] [32mhttp[39m: GET /api/contact (2 ms) 404
+[2026-01-09 20:14:03.093] [32mhttp[39m: GET /api/contact-hero (4 ms) 404
+[2026-01-09 20:14:03.094] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-09 20:14:03.095] [32mhttp[39m: GET /api/contact (3 ms) 404
+[2026-01-09 20:14:03.313] [32mhttp[39m: GET /api/contact-hero (7 ms) 404
+[2026-01-09 20:14:03.313] [32mhttp[39m: GET /api/contact (4 ms) 404
+[2026-01-09 20:14:03.313] [32mhttp[39m: GET /api/contact (1 ms) 404
+[2026-01-09 20:40:57.662] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures (7 ms) 404
+[2026-01-09 21:11:07.620] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (9 ms) 404
+[2026-01-09 21:19:10.511] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (6 ms) 404
+[2026-01-09 21:19:11.172] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (1 ms) 404
+[2026-01-09 21:19:11.397] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (1 ms) 404
+[2026-01-09 21:19:11.525] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (1 ms) 404
+[2026-01-09 21:19:11.671] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (2 ms) 404
+[2026-01-09 21:19:17.095] [32mhttp[39m: GET /api/companies?populate=logo%2Cfeatures%2Copinions%2CcontactInfo&sort=rating%3Adesc (1 ms) 404

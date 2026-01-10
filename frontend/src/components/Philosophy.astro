@@ -28,9 +28,8 @@ if (!data) {
     label: "NASZA FILOZOFIA",
     title: "Uważny ruch dla równowagi w życiu.",
     description1:
-      "W Pilatece wierzymy, że prawdziwa siła pochodzi z wnętrza. Nasze studio, położone w spokojnej części Wrocławia, oferuje schronienie od miejskiego zgiełku. Skupiamy się na klasycznych metodach Pilatesu, wzbogaconych o współczesną wiedzę z zakresu biomechaniki.",
-    description2:
-      "Niezależnie od tego, czy przechodzisz rehabilitację po kontuzji, czy chcesz pogłębić swoją praktykę fizyczną, nasi certyfikowani instruktorzy poprowadzą Cię z precyzją i troską w kameralnym, minimalistycznym wnętrzu stworzonym do koncentracji.",
+      "Joseph Pilates stworzył swój system ćwiczeń przede wszystkim w celu usprawniania i polepszania jakości życia – i dokładnie w ten sposób podchodzę do prowadzonych przeze mnie treningów. Niezależnie od tego, czy chcesz wrócić do sprawności po kontuzji, bezpiecznie ćwiczyć w ciąży, szukasz mobilności potrzebnej na boisku lub korcie czy po prostu szukasz mądrego, jakościowego ruchu, który pomoże Ci budować sprawność – w kameralnej przestrzeni Pilateki możemy wspólnie znaleźć rozwiązanie.",
+    description2: "",
     image: {
       url: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=800",
       alternativeText:
@@ -57,29 +56,16 @@ const imageUrl = data.image.url.startsWith("http")
           >{data.label}</span
         >
         <h3
-          class="text-4xl md:text-5xl font-display text-primary dark:text-white leading-tight mb-10"
+          class="text-4xl md:text-5xl font-display text-primary dark:text-white leading-tight mb-10 text-pretty"
         >
           {data.title}
         </h3>
         <div class="space-y-6">
           <p
-            class="text-gray-500 dark:text-gray-400 leading-relaxed font-light text-lg"
+            class="text-gray-500 dark:text-gray-400 leading-relaxed font-light text-lg whitespace-pre-line"
           >
             {data.description1}
           </p>
-          <p
-            class="text-gray-500 dark:text-gray-400 leading-relaxed font-light text-lg"
-          >
-            {data.description2}
-          </p>
-        </div>
-        <div class="pt-10">
-          <a
-            class="inline-block text-primary dark:text-white font-bold uppercase tracking-[0.2em] text-[10px] border-b border-primary/20 hover:border-primary transition-all pb-1"
-            href="/o-mnie/"
-          >
-            POZNAJ NASZĄ HISTORIĘ
-          </a>
         </div>
       </div>
       <div

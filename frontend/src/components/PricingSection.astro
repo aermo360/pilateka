@@ -39,20 +39,21 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
         {
           name: "Trening pojedynczy",
           price: "250 zł",
-          description: "Jednorazowy trening personalny (55 min)",
+          description: "Jednorazowy trening personalny (55-60 min)",
           linkText: "REZERWUJ",
         },
         {
           name: "Pakiet 5 treningów",
           price: "1000 zł",
-          description: "Ważny przez 1,5 miesiąca. Cena za sesję: 200 zł",
-          popular: true,
+          description:
+            "Wszystkie karnety są ważne 3 miesiące. Cena za sesję: 200 zł",
           linkText: "WYBIERZ PAKIET",
         },
         {
           name: "Pakiet 10 treningów",
           price: "1900 zł",
-          description: "Ważny przez 12 tygodni. Cena za sesję: 190 zł",
+          description:
+            "Wszystkie karnety są ważne 3 miesiące. Cena za sesję: 190 zł",
           linkText: "WYBIERZ PAKIET",
         },
       ],
@@ -67,19 +68,21 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
         {
           name: "Trening pojedynczy",
           price: "320 zł",
-          description: "Cena za duet (55 min)",
+          description: "Cena za duet (55-60 min)",
           linkText: "REZERWUJ",
         },
         {
           name: "Pakiet 5 treningów",
           price: "1500 zł",
-          description: "Ważny przez 1,5 miesiąca. Cena za trening: 300 zł",
+          description:
+            "Wszystkie karnety są ważne 3 miesiące. Cena za trening: 300 zł",
           linkText: "WYBIERZ PAKIET",
         },
         {
           name: "Pakiet 10 treningów",
           price: "2700 zł",
-          description: "Ważny przez 12 tygodni. Cena za trening: 270 zł",
+          description:
+            "Wszystkie karnety są ważne 3 miesiące. Cena za trening: 270 zł",
           linkText: "WYBIERZ PAKIET",
         },
       ],
@@ -115,11 +118,6 @@ if (!categories || !Array.isArray(categories) || categories.length === 0) {
                 <div
                   class={`p-8 md:p-10 border-b border-gray-50 dark:border-gray-800 transition-colors group relative ${index === category.items.length - 1 ? "border-b-0" : ""}`}
                 >
-                  {item.popular && (
-                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] uppercase font-bold px-4 py-2">
-                      Popularne
-                    </div>
-                  )}
                   <div class="flex justify-between items-baseline mb-4">
                     <h3 class="text-xl font-accent text-primary dark:text-white uppercase tracking-wider">
                       {item.name}
